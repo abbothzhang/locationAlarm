@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['rectformaprect_3a',['rectForMapRect:',['../interface_b_m_k_overlay_view.html#a4eb52fd9951bcfc898e9a026ee40e99e',1,'BMKOverlayView']]],
+  ['regionthatfits_3a',['regionThatFits:',['../interface_b_m_k_map_view.html#a5a1387f64868bf341cbf743063a91d28',1,'BMKMapView']]],
+  ['remove_3a',['remove:',['../interface_b_m_k_offline_map.html#ac834ae7e577d2fa4dc864232b30f02df',1,'BMKOfflineMap']]],
+  ['removeannotation_3a',['removeAnnotation:',['../category_b_m_k_map_view_07_annotation_a_p_i_08.html#a6b6b75a5bf8b02854767f782a38d2009',1,'BMKMapView(AnnotationAPI)::removeAnnotation:()'],['../interface_b_m_k_map_view.html#a6b6b75a5bf8b02854767f782a38d2009',1,'BMKMapView::removeAnnotation:()']]],
+  ['removeannotations_3a',['removeAnnotations:',['../category_b_m_k_map_view_07_annotation_a_p_i_08.html#a37fbe2b5db750affb4e0234cbf24a3c7',1,'BMKMapView(AnnotationAPI)::removeAnnotations:()'],['../interface_b_m_k_map_view.html#a37fbe2b5db750affb4e0234cbf24a3c7',1,'BMKMapView::removeAnnotations:()']]],
+  ['removeheatmap',['removeHeatMap',['../category_b_m_k_map_view_07_heat_map_a_p_i_08.html#a1337cb03abdb9ae730a2410f0fbd2f2f',1,'BMKMapView(HeatMapAPI)::removeHeatMap()'],['../interface_b_m_k_map_view.html#a1337cb03abdb9ae730a2410f0fbd2f2f',1,'BMKMapView::removeHeatMap()']]],
+  ['removeoverlay_3a',['removeOverlay:',['../category_b_m_k_map_view_07_overlays_a_p_i_08.html#a3be1f2a019df3ff971f6a36f142e55be',1,'BMKMapView(OverlaysAPI)::removeOverlay:()'],['../interface_b_m_k_map_view.html#a3be1f2a019df3ff971f6a36f142e55be',1,'BMKMapView::removeOverlay:()']]],
+  ['removeoverlays_3a',['removeOverlays:',['../category_b_m_k_map_view_07_overlays_a_p_i_08.html#a3eb7909fb1adce117c1de432fd5d816a',1,'BMKMapView(OverlaysAPI)::removeOverlays:()'],['../interface_b_m_k_map_view.html#a3eb7909fb1adce117c1de432fd5d816a',1,'BMKMapView::removeOverlays:()']]],
+  ['renderatregionwithpoint_3apointcount_3afillcolor_3ausingtrianglefan_3a',['renderATRegionWithPoint:pointCount:fillColor:usingTriangleFan:',['../interface_b_m_k_overlay_view.html#a9b277a3ef5cfef2ba6737af997c869d5',1,'BMKOverlayView']]],
+  ['renderlineswithpoints_3apointcount_3astrokecolor_3alinewidth_3alooped_3a',['renderLinesWithPoints:pointCount:strokeColor:lineWidth:looped:',['../interface_b_m_k_overlay_view.html#a67fcc048446dfa1725aa4a86b241b282',1,'BMKOverlayView']]],
+  ['renderlineswithpoints_3apointcount_3astrokecolor_3alinewidth_3alooped_3alinedash_3a',['renderLinesWithPoints:pointCount:strokeColor:lineWidth:looped:lineDash:',['../interface_b_m_k_overlay_view.html#a81a56677ce4da3b33a07430793784341',1,'BMKOverlayView']]],
+  ['renderregionwithpoints_3apointcount_3afillcolor_3ausingtrianglefan_3a',['renderRegionWithPoints:pointCount:fillColor:usingTriangleFan:',['../interface_b_m_k_overlay_view.html#a85a054df49b09373b036e22771138ba2',1,'BMKOverlayView']]],
+  ['rendertexturedlineswithpoints_3apointcount_3alinewidth_3atextureid_3alooped_3a',['renderTexturedLinesWithPoints:pointCount:lineWidth:textureID:looped:',['../interface_b_m_k_overlay_view.html#a4f1fc6aa6b3dfc3d98469b2221ffabc7',1,'BMKOverlayView']]],
+  ['requestlocationshareurl_3a',['requestLocationShareURL:',['../interface_b_m_k_share_u_r_l_search.html#a42ece3de1f45f2fd3be760f78e37b9b2',1,'BMKShareURLSearch']]],
+  ['requestpoidetailshareurl_3a',['requestPoiDetailShareURL:',['../interface_b_m_k_share_u_r_l_search.html#a91351e2591a3918fc233ba8ca42c83be',1,'BMKShareURLSearch']]],
+  ['reversegeocode_3a',['reverseGeoCode:',['../interface_b_m_k_geo_code_search.html#a3594336ed6a95074f069b4d0ebc75df2',1,'BMKGeoCodeSearch']]]
+];

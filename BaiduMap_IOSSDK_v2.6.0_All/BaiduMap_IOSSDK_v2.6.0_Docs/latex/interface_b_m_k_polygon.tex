@@ -1,0 +1,73 @@
+\hypertarget{interface_b_m_k_polygon}{\section{B\+M\+K\+Polygon类 参考}
+\label{interface_b_m_k_polygon}\index{B\+M\+K\+Polygon@{B\+M\+K\+Polygon}}
+}
+
+
+此类用于定义一个多边形区域  
+
+
+
+
+{\ttfamily \#import $<$B\+M\+K\+Polygon.\+h$>$}
+
+类 B\+M\+K\+Polygon 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{interface_b_m_k_polygon}
+\end{center}
+\end{figure}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(\hyperlink{interface_b_m_k_polygon}{B\+M\+K\+Polygon} $\ast$) + \hyperlink{interface_b_m_k_polygon_a74b92a200709fb4c6718b26ebdfcc50a}{polygon\+With\+Points\+:count\+:}
+\item 
+(\hyperlink{interface_b_m_k_polygon}{B\+M\+K\+Polygon} $\ast$) + \hyperlink{interface_b_m_k_polygon_aa3de0deeba040969c9211b64c59831f2}{polygon\+With\+Coordinates\+:count\+:}
+\end{DoxyCompactItemize}
+\subsection*{额外继承的成员函数}
+
+
+\subsection{详细描述}
+此类用于定义一个多边形区域 
+
+\subsection{Method Documentation}
+\hypertarget{interface_b_m_k_polygon_aa3de0deeba040969c9211b64c59831f2}{\index{B\+M\+K\+Polygon@{B\+M\+K\+Polygon}!polygon\+With\+Coordinates\+:count\+:@{polygon\+With\+Coordinates\+:count\+:}}
+\index{polygon\+With\+Coordinates\+:count\+:@{polygon\+With\+Coordinates\+:count\+:}!B\+M\+K\+Polygon@{B\+M\+K\+Polygon}}
+\subsubsection[{polygon\+With\+Coordinates\+:count\+:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf B\+M\+K\+Polygon} $\ast$) polygon\+With\+Coordinates\+: 
+\begin{DoxyParamCaption}
+\item[{(C\+L\+Location\+Coordinate2\+D $\ast$)}]{coords}
+\item[{count:(N\+S\+U\+Integer)}]{count}
+\end{DoxyParamCaption}
+}}\label{interface_b_m_k_polygon_aa3de0deeba040969c9211b64c59831f2}
+根据多个点生成多边形 
+\begin{DoxyParams}{参数}
+{\em coords} & 经纬度坐标点数组，这些点将被拷贝到生成的多边形对象中 \\
+\hline
+{\em count} & 点的个数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+新生成的多边形对象 
+\end{DoxyReturn}
+\hypertarget{interface_b_m_k_polygon_a74b92a200709fb4c6718b26ebdfcc50a}{\index{B\+M\+K\+Polygon@{B\+M\+K\+Polygon}!polygon\+With\+Points\+:count\+:@{polygon\+With\+Points\+:count\+:}}
+\index{polygon\+With\+Points\+:count\+:@{polygon\+With\+Points\+:count\+:}!B\+M\+K\+Polygon@{B\+M\+K\+Polygon}}
+\subsubsection[{polygon\+With\+Points\+:count\+:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf B\+M\+K\+Polygon} $\ast$) polygon\+With\+Points\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf B\+M\+K\+Map\+Point} $\ast$)}]{points}
+\item[{count:(N\+S\+U\+Integer)}]{count}
+\end{DoxyParamCaption}
+}}\label{interface_b_m_k_polygon_a74b92a200709fb4c6718b26ebdfcc50a}
+根据多个点生成多边形 
+\begin{DoxyParams}{参数}
+{\em points} & 直角坐标点数组，这些点将被拷贝到生成的多边形对象中 \\
+\hline
+{\em count} & 点的个数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+新生成的多边形对象 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+output/map\+\_\+search\+\_\+cloud\+\_\+loc\+\_\+util/inc/B\+M\+K\+Polygon.\+h\end{DoxyCompactItemize}

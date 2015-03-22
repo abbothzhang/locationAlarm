@@ -1,0 +1,60 @@
+\hypertarget{interface_b_m_k_overlay_g_l_basic_view}{\section{B\+M\+K\+Overlay\+G\+L\+Basic\+View类 参考}
+\label{interface_b_m_k_overlay_g_l_basic_view}\index{B\+M\+K\+Overlay\+G\+L\+Basic\+View@{B\+M\+K\+Overlay\+G\+L\+Basic\+View}}
+}
+
+
+该类定义了一个用opengl绘制的\+Overlay\+View的基类，如果需要用gdi进行绘制请继承于\+B\+M\+K\+Overlay\+Path\+View类  
+
+
+
+
+{\ttfamily \#import $<$B\+M\+K\+Overlay\+G\+L\+Basic\+View.\+h$>$}
+
+类 B\+M\+K\+Overlay\+G\+L\+Basic\+View 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.333333cm]{interface_b_m_k_overlay_g_l_basic_view}
+\end{center}
+\end{figure}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_b_m_k_overlay_g_l_basic_view_a8adee647cc7ac0f196b7603405369ea7}{package U\+I\+Color $\ast$ {\bfseries \+\_\+fill\+Color}}\label{interface_b_m_k_overlay_g_l_basic_view_a8adee647cc7ac0f196b7603405369ea7}
+
+\item 
+\hypertarget{interface_b_m_k_overlay_g_l_basic_view_a1d4374c8eab668cec99c7440f04d9797}{U\+I\+Color $\ast$ {\bfseries \+\_\+stroke\+Color}}\label{interface_b_m_k_overlay_g_l_basic_view_a1d4374c8eab668cec99c7440f04d9797}
+
+\item 
+\hypertarget{interface_b_m_k_overlay_g_l_basic_view_a16d048b6d3c2d01cc2e66aa7e369b722}{C\+G\+Float {\bfseries \+\_\+line\+Width}}\label{interface_b_m_k_overlay_g_l_basic_view_a16d048b6d3c2d01cc2e66aa7e369b722}
+
+\item 
+\hypertarget{interface_b_m_k_overlay_g_l_basic_view_ad0bc8178da7b75c866b8425f49eeecc9}{C\+G\+Path\+Ref {\bfseries \+\_\+path}}\label{interface_b_m_k_overlay_g_l_basic_view_ad0bc8178da7b75c866b8425f49eeecc9}
+
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_b_m_k_overlay_g_l_basic_view_a8eb0ecfa09f5ab1b71f3ec4cfa9a2c70}{U\+I\+Color $\ast$ \hyperlink{interface_b_m_k_overlay_g_l_basic_view_a8eb0ecfa09f5ab1b71f3ec4cfa9a2c70}{fill\+Color}}\label{interface_b_m_k_overlay_g_l_basic_view_a8eb0ecfa09f5ab1b71f3ec4cfa9a2c70}
+
+\begin{DoxyCompactList}\small\item\em 填充颜色 \end{DoxyCompactList}\item 
+\hypertarget{interface_b_m_k_overlay_g_l_basic_view_a99dfabd79cc8a845a742f5ee5742c626}{U\+I\+Color $\ast$ \hyperlink{interface_b_m_k_overlay_g_l_basic_view_a99dfabd79cc8a845a742f5ee5742c626}{stroke\+Color}}\label{interface_b_m_k_overlay_g_l_basic_view_a99dfabd79cc8a845a742f5ee5742c626}
+
+\begin{DoxyCompactList}\small\item\em 画笔颜色 \end{DoxyCompactList}\item 
+\hypertarget{interface_b_m_k_overlay_g_l_basic_view_a230d5991c45f628c98f4ab10de2dd093}{C\+G\+Float \hyperlink{interface_b_m_k_overlay_g_l_basic_view_a230d5991c45f628c98f4ab10de2dd093}{line\+Width}}\label{interface_b_m_k_overlay_g_l_basic_view_a230d5991c45f628c98f4ab10de2dd093}
+
+\begin{DoxyCompactList}\small\item\em 画笔宽度，默认为0 \end{DoxyCompactList}\item 
+\hypertarget{interface_b_m_k_overlay_g_l_basic_view_a9df6afb206ccd65d94dd223af256d3c2}{C\+G\+Path\+Ref \hyperlink{interface_b_m_k_overlay_g_l_basic_view_a9df6afb206ccd65d94dd223af256d3c2}{path}}\label{interface_b_m_k_overlay_g_l_basic_view_a9df6afb206ccd65d94dd223af256d3c2}
+
+\begin{DoxyCompactList}\small\item\em path对象 \end{DoxyCompactList}\item 
+\hypertarget{interface_b_m_k_overlay_g_l_basic_view_aaf8c5d04df3104082006af36b4e3f2f3}{B\+O\+O\+L \hyperlink{interface_b_m_k_overlay_g_l_basic_view_aaf8c5d04df3104082006af36b4e3f2f3}{line\+Dash}}\label{interface_b_m_k_overlay_g_l_basic_view_aaf8c5d04df3104082006af36b4e3f2f3}
+
+\begin{DoxyCompactList}\small\item\em 是否为虚线样式 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{额外继承的成员函数}
+
+
+\subsection{详细描述}
+该类定义了一个用opengl绘制的\+Overlay\+View的基类，如果需要用gdi进行绘制请继承于\+B\+M\+K\+Overlay\+Path\+View类 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+output/map\+\_\+search\+\_\+cloud\+\_\+loc\+\_\+util/inc/B\+M\+K\+Overlay\+G\+L\+Basic\+View.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6D8597EE-EBEC-4610-9CE8-DAFF9B11C0F9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>IphoneMapSdkDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8ad7a1e4-d245-4f8c-a8c5-1a570503e5db++2968</key>
+		<string>https://svn.baidu.com/app/search/lbs-mobile/trunk/mapsdk/vector</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iphone/IphoneMapSdkDemo/IphoneMapSdkDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8ad7a1e4-d245-4f8c-a8c5-1a570503e5db++2968</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>8ad7a1e4-d245-4f8c-a8c5-1a570503e5db++2968</key>
+		<string>https://svn.baidu.com/app/search/lbs-mobile</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://svn.baidu.com/app/search/lbs-mobile/trunk/mapsdk/vector/iphone/IphoneMapSdkDemo/IphoneMapSdkDemo.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8ad7a1e4-d245-4f8c-a8c5-1a570503e5db++2968</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8ad7a1e4-d245-4f8c-a8c5-1a570503e5db++2968</string>
+			<key>IDESourceControlWCCName</key>
+			<string>vector</string>
+		</dict>
+	</array>
+</dict>
+</plist>
