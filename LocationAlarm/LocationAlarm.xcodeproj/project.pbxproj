@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		504998011AC0F7300005307F /* TableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 504998001AC0F7300005307F /* TableVC.m */; };
+		504998041AC0F7650005307F /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 504998031AC0F7650005307F /* SettingVC.m */; };
+		5049980B1AC138E40005307F /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5049980A1AC138E40005307F /* ImageUtil.m */; };
+		5049980E1AC13BEE0005307F /* img6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5049980D1AC13BEE0005307F /* img6.png */; };
+		504998101AC13BFA0005307F /* img5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5049980F1AC13BFA0005307F /* img5.png */; };
+		504998141AC13C0A0005307F /* img3.png in Resources */ = {isa = PBXBuildFile; fileRef = 504998111AC13C0A0005307F /* img3.png */; };
+		504998151AC13C0A0005307F /* img4.png in Resources */ = {isa = PBXBuildFile; fileRef = 504998121AC13C0A0005307F /* img4.png */; };
+		504998161AC13C0A0005307F /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 504998131AC13C0A0005307F /* img1.png */; };
+		504998181AC13C250005307F /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = 504998171AC13C250005307F /* img2.png */; };
 		54EF29FE1ABF204B00ED5EA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EF29FD1ABF204B00ED5EA2 /* Foundation.framework */; };
 		54EF2A001ABF204B00ED5EA2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EF29FF1ABF204B00ED5EA2 /* CoreGraphics.framework */; };
 		54EF2A021ABF204B00ED5EA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EF2A011ABF204B00ED5EA2 /* UIKit.framework */; };
@@ -19,7 +28,7 @@
 		54EF2A191ABF204C00ED5EA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EF2A011ABF204B00ED5EA2 /* UIKit.framework */; };
 		54EF2A211ABF204C00ED5EA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54EF2A1F1ABF204C00ED5EA2 /* InfoPlist.strings */; };
 		54EF2A231ABF204C00ED5EA2 /* LocationAlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF2A221ABF204C00ED5EA2 /* LocationAlarmTests.m */; };
-		54EF2A2F1ABF21AE00ED5EA2 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EF2A2E1ABF21AE00ED5EA2 /* MainVC.m */; };
+		54EF2A2F1ABF21AE00ED5EA2 /* MapVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 54EF2A2E1ABF21AE00ED5EA2 /* MapVC.mm */; };
 		54EF2AF41ABF257300ED5EA2 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EF2AF31ABF257300ED5EA2 /* libbaidumapapi.a */; };
 		54EF2AF61ABF259C00ED5EA2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EF2AF51ABF259C00ED5EA2 /* CoreLocation.framework */; };
 		54EF2AF81ABF25AB00ED5EA2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EF2AF71ABF25AB00ED5EA2 /* QuartzCore.framework */; };
@@ -40,6 +49,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		504997FF1AC0F7300005307F /* TableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableVC.h; path = ViewController/TableVC.h; sourceTree = "<group>"; };
+		504998001AC0F7300005307F /* TableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableVC.m; path = ViewController/TableVC.m; sourceTree = "<group>"; };
+		504998021AC0F7650005307F /* SettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingVC.h; path = ViewController/SettingVC.h; sourceTree = "<group>"; };
+		504998031AC0F7650005307F /* SettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingVC.m; path = ViewController/SettingVC.m; sourceTree = "<group>"; };
+		504998091AC138E40005307F /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageUtil.h; path = Utils/ImageUtil.h; sourceTree = "<group>"; };
+		5049980A1AC138E40005307F /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageUtil.m; path = Utils/ImageUtil.m; sourceTree = "<group>"; };
+		5049980D1AC13BEE0005307F /* img6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img6.png; sourceTree = "<group>"; };
+		5049980F1AC13BFA0005307F /* img5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img5.png; sourceTree = "<group>"; };
+		504998111AC13C0A0005307F /* img3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img3.png; sourceTree = "<group>"; };
+		504998121AC13C0A0005307F /* img4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img4.png; sourceTree = "<group>"; };
+		504998131AC13C0A0005307F /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
+		504998171AC13C250005307F /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img2.png; sourceTree = "<group>"; };
 		54EF29FA1ABF204B00ED5EA2 /* LocationAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EF29FD1ABF204B00ED5EA2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		54EF29FF1ABF204B00ED5EA2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,8 +77,8 @@
 		54EF2A1E1ABF204C00ED5EA2 /* LocationAlarmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LocationAlarmTests-Info.plist"; sourceTree = "<group>"; };
 		54EF2A201ABF204C00ED5EA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		54EF2A221ABF204C00ED5EA2 /* LocationAlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationAlarmTests.m; sourceTree = "<group>"; };
-		54EF2A2D1ABF21AE00ED5EA2 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainVC.h; path = ViewController/MainVC.h; sourceTree = "<group>"; };
-		54EF2A2E1ABF21AE00ED5EA2 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainVC.m; path = ViewController/MainVC.m; sourceTree = "<group>"; };
+		54EF2A2D1ABF21AE00ED5EA2 /* MapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapVC.h; path = ViewController/MapVC.h; sourceTree = "<group>"; };
+		54EF2A2E1ABF21AE00ED5EA2 /* MapVC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MapVC.mm; path = ViewController/MapVC.mm; sourceTree = "<group>"; };
 		54EF2AB61ABF257300ED5EA2 /* BMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMapKit.h; sourceTree = "<group>"; };
 		54EF2AB71ABF257300ED5EA2 /* BMKActionPaopaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKActionPaopaoView.h; sourceTree = "<group>"; };
 		54EF2AB81ABF257300ED5EA2 /* BMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKAnnotation.h; sourceTree = "<group>"; };
@@ -158,6 +179,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		504998051AC1389B0005307F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				504998091AC138E40005307F /* ImageUtil.h */,
+				5049980A1AC138E40005307F /* ImageUtil.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		5049980C1AC13BD70005307F /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				504998131AC13C0A0005307F /* img1.png */,
+				504998171AC13C250005307F /* img2.png */,
+				504998111AC13C0A0005307F /* img3.png */,
+				504998121AC13C0A0005307F /* img4.png */,
+				5049980F1AC13BFA0005307F /* img5.png */,
+				5049980D1AC13BEE0005307F /* img6.png */,
+			);
+			name = Res;
+			sourceTree = "<group>";
+		};
 		54EF29F11ABF204B00ED5EA2 = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +240,9 @@
 			isa = PBXGroup;
 			children = (
 				54EF2A2C1ABF214700ED5EA2 /* ViewController */,
+				504998051AC1389B0005307F /* Utils */,
 				54EF2A301ABF243C00ED5EA2 /* BaiduMap */,
+				5049980C1AC13BD70005307F /* Res */,
 				54EF2A0F1ABF204C00ED5EA2 /* Images.xcassets */,
 				54EF2A041ABF204B00ED5EA2 /* Supporting Files */,
 			);
@@ -238,8 +283,12 @@
 		54EF2A2C1ABF214700ED5EA2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				54EF2A2D1ABF21AE00ED5EA2 /* MainVC.h */,
-				54EF2A2E1ABF21AE00ED5EA2 /* MainVC.m */,
+				504997FF1AC0F7300005307F /* TableVC.h */,
+				504998001AC0F7300005307F /* TableVC.m */,
+				54EF2A2D1ABF21AE00ED5EA2 /* MapVC.h */,
+				54EF2A2E1ABF21AE00ED5EA2 /* MapVC.mm */,
+				504998021AC0F7650005307F /* SettingVC.h */,
+				504998031AC0F7650005307F /* SettingVC.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -398,9 +447,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504998151AC13C0A0005307F /* img4.png in Resources */,
+				504998161AC13C0A0005307F /* img1.png in Resources */,
+				504998181AC13C250005307F /* img2.png in Resources */,
 				54EF2B021ABF266A00ED5EA2 /* mapapi.bundle in Resources */,
+				504998101AC13BFA0005307F /* img5.png in Resources */,
 				54EF2A081ABF204B00ED5EA2 /* InfoPlist.strings in Resources */,
+				5049980E1AC13BEE0005307F /* img6.png in Resources */,
 				54EF2A101ABF204C00ED5EA2 /* Images.xcassets in Resources */,
+				504998141AC13C0A0005307F /* img3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,8 +474,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504998041AC0F7650005307F /* SettingVC.m in Sources */,
 				54EF2A0E1ABF204B00ED5EA2 /* AppDelegate.m in Sources */,
-				54EF2A2F1ABF21AE00ED5EA2 /* MainVC.m in Sources */,
+				504998011AC0F7300005307F /* TableVC.m in Sources */,
+				5049980B1AC138E40005307F /* ImageUtil.m in Sources */,
+				54EF2A2F1ABF21AE00ED5EA2 /* MapVC.mm in Sources */,
 				54EF2A0A1ABF204B00ED5EA2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,11 +603,10 @@
 				INFOPLIST_FILE = "LocationAlarm/LocationAlarm-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/file/githubProject/locationAlarm/LocationAlarm/LocationAlarm,
-					/file/githubProject/locationAlarm/LocationAlarm/LocationAlarm/baiduMap,
-					/file/githubProject/locationAlarm/LocationAlarm/LocationAlarm/BaiduMap,
+					/file/githubProject/ios/locationAlarm/LocationAlarm/LocationAlarm/BaiduMap,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -564,11 +621,10 @@
 				INFOPLIST_FILE = "LocationAlarm/LocationAlarm-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/file/githubProject/locationAlarm/LocationAlarm/LocationAlarm,
-					/file/githubProject/locationAlarm/LocationAlarm/LocationAlarm/baiduMap,
-					/file/githubProject/locationAlarm/LocationAlarm/LocationAlarm/BaiduMap,
+					/file/githubProject/ios/locationAlarm/LocationAlarm/LocationAlarm/BaiduMap,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -634,6 +690,7 @@
 				54EF2A281ABF204C00ED5EA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54EF2A291ABF204C00ED5EA2 /* Build configuration list for PBXNativeTarget "LocationAlarmTests" */ = {
 			isa = XCConfigurationList;
@@ -642,6 +699,7 @@
 				54EF2A2B1ABF204C00ED5EA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

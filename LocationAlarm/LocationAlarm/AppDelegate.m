@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "MainVC.h"
+#import "MapVC.h"
+#import "TableVC.h"
+#import "SettingVC.h"
+#import "ImageUtil.h"
 
 @implementation AppDelegate
 
@@ -17,8 +20,28 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    MainVC *mainVc = [[MainVC alloc] init];
-    self.window.rootViewController = mainVc;
+    
+    
+    TableVC *tableVC = [[TableVC alloc] init];
+    MapVC *mapVc = [[MapVC alloc] init];
+    SettingVC *settiongVC = [[SettingVC alloc] init];
+    
+    UIImage *img1Nor = [UIImage imageNamed:@"img1.png"];
+    img1Nor = [ImageUtil scaleImg:img1Nor toScale:0.3];
+    
+    tableVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"列表"image:img1Nor selectedImage:img1Nor];
+    mapVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"地图"image:img1Nor selectedImage:img1Nor];
+    settiongVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"设置"image:img1Nor selectedImage:img1Nor];
+    
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:tableVC];
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:mapVc];
+    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:settiongVC];
+    
+    NSArray *vcArray = @[nav1,nav2,nav3];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = vcArray;
+    tabBarVC.selectedIndex = 0;
+    self.window.rootViewController = tabBarVC;
     
     return YES;
 }
