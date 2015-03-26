@@ -1,19 +1,19 @@
 //
-//  MainViewController.m
+//  SelectLocationVC.m
 //  LocationAlarm
 //
-//  Created by 张辉 on 15-3-23.
+//  Created by albert on 15/3/25.
 //  Copyright (c) 2015年 张辉. All rights reserved.
 //
 
-#import "MapVC.h"
+#import "SelectLocationVC.h"
 #import "BMapKit.h"
 #import "UserLocationInfo.h"
 #import "Utils.h"
-#import "AlarmInfo.h"
 #import "SetDistanceVC.h"
+#import "AlarmInfo.h"
 
-@interface MapVC ()<BMKGeneralDelegate,BMKMapViewDelegate,BMKLocationServiceDelegate,BMKPoiSearchDelegate,UISearchBarDelegate>
+@interface SelectLocationVC ()<BMKGeneralDelegate,BMKMapViewDelegate,BMKLocationServiceDelegate,BMKPoiSearchDelegate,UISearchBarDelegate>
 
 @property (nonatomic,strong) BMKMapManager      *mapManager;
 @property (nonatomic,strong) BMKMapView         *mapView;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation MapVC
+@implementation SelectLocationVC
 
 -(id)init{
     self = [super init];
@@ -35,42 +35,44 @@
 }
 
 -(void)initMap{
-    if (!_mapManager) {
-        _mapManager = [[BMKMapManager alloc]init];
-        // 如果要关注网络及授权验证事件，请设定generalDelegate参数
-        BOOL ret = [_mapManager start:@"OIXcyU6HLb634ZPbZynRv3DS" generalDelegate:self];
-        if (!ret) {
-            NSLog(@"manager start failed!");
-        }
+    _mapManager = [[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定generalDelegate参数
+    BOOL ret = [_mapManager start:@"OIXcyU6HLb634ZPbZynRv3DS" generalDelegate:self];
+    if (!ret) {
+        NSLog(@"manager start failed!");
     }
+   
+
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     
     [self.mapView viewWillAppear];
-    
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [self.mapView viewWillDisappear];
-    _mapView = nil;
+    [_mapView viewWillDisappear];
     _mapView.delegate = nil; // 不用时，置nil
     _locService.delegate = nil;
     _poiSearch.delegate = nil;
-    _mapManager = nil;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"地图";
+    self.title = @"选择闹钟提醒的地方";
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"下一步" style:nil target:self action:@selector()];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, 320, 480)];
+    self.mapView.delegate = self;//记得不用的时候需要置nil，否则影响内存的释放
     [self.view addSubview:self.mapView];
     _fristSetCenter = NO;
     _locService = [[BMKLocationService alloc]init];
     //定位
     _locService.delegate = self;
     [_locService startUserLocationService];
+    
     self.mapView.showsUserLocation = NO;//先关闭显示的定位图层
     self.mapView.userTrackingMode = BMKUserTrackingModeNone;//设置定位的状态
     self.mapView.showsUserLocation = YES;//显示定位图层
@@ -88,13 +90,13 @@
     
 }
 
--(BMKMapView *)mapView{
-    if (!_mapView) {
-        _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, 320, 700)];
-        _mapView.delegate = self;//记得不用的时候需要置nil，否则影响内存的释放
-    }
-    return _mapView;
-}
+//-(BMKMapView *)mapView{
+//    if (!_mapView) {
+//        _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, 320, 700)];
+//        _mapView.delegate = self;//记得不用的时候需要置nil，否则影响内存的释放
+//    }
+//    return _mapView;
+//}
 
 #pragma mark - BMKMapViewDelegate
 /**
@@ -133,7 +135,7 @@
  *@param views 取消选中的annotation views
  */
 - (void)mapView:(BMKMapView *)mapView didDeselectAnnotationView:(BMKAnnotationView *)view{
-    
+
 }
 
 /**
@@ -152,6 +154,7 @@
 }
 
 #pragma mark - UISearchBarDelegate
+
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     
 }
@@ -199,7 +202,7 @@
             BMKPointAnnotation* item = [[BMKPointAnnotation alloc]init];
             item.coordinate = poi.pt;
             item.title = poi.name;
-            item.subtitle = @"点击跳转设置提醒距离页面";
+            item.subtitle = @"点击跳转设置提醒距离";
             [_mapView addAnnotation:item];
             if(i == 0){
                 //将第一个点的坐标移到屏幕中央
@@ -245,11 +248,11 @@
         [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemark,NSError *error)
          {
              CLPlacemark *mark=[placemark objectAtIndex:0];
-//             place.title=@"没有当前位置的详细信息";
-//             place.subTitle=@"详细信息请点击‘附近’查看";
-//             place.title=[NSString stringWithFormat:@"%@%@%@",mark.subLocality,mark.thoroughfare,mark.subThoroughfare];
-//             place.subTitle=[NSString stringWithFormat:@"%@",mark.name];//获取subtitle的信息
-//             [self.myMapView selectAnnotation:place animated:YES];
+             //             place.title=@"没有当前位置的详细信息";
+             //             place.subTitle=@"详细信息请点击‘附近’查看";
+             //             place.title=[NSString stringWithFormat:@"%@%@%@",mark.subLocality,mark.thoroughfare,mark.subThoroughfare];
+             //             place.subTitle=[NSString stringWithFormat:@"%@",mark.name];//获取subtitle的信息
+             //             [self.myMapView selectAnnotation:place animated:YES];
              [UserLocationInfo sharedInstance].city = mark.locality;
              [UserLocationInfo sharedInstance].latitude = userLocation.location.coordinate.latitude;
              [UserLocationInfo sharedInstance].longtitude = userLocation.location.coordinate.longitude;

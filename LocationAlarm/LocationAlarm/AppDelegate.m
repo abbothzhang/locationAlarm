@@ -40,7 +40,7 @@
     NSArray *vcArray = @[nav1,nav2,nav3];
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
     tabBarVC.viewControllers = vcArray;
-    tabBarVC.selectedIndex = 0;
+    tabBarVC.selectedIndex = 1;
     self.window.rootViewController = tabBarVC;
     
     return YES;

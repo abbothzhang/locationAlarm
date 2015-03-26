@@ -193,6 +193,7 @@
         pointAnnotation.coordinate = coor;
         pointAnnotation.title = @"test";
         pointAnnotation.subtitle = @"此Annotation可拖拽!";
+        
     }
     [_mapView addAnnotation:pointAnnotation];
 }
@@ -299,6 +300,9 @@
 // 当点击annotation view弹出的泡泡时，调用此接口
 - (void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view;
 {
+    BMKPointAnnotation *annotation = view.annotation;
+    NSString *title = annotation.title;
+    NSString *subTitle = annotation.subtitle;
     NSLog(@"paopaoclick");
 }
 

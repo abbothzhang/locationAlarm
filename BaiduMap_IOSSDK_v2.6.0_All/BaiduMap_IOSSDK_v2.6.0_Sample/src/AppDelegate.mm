@@ -26,7 +26,7 @@ BMKMapManager* _mapManager;
     
 	// 要使用百度地图，请先启动BaiduMapManager
 	_mapManager = [[BMKMapManager alloc]init];
-    BOOL ret = [_mapManager start:@"OIXcyU6HLb634ZPbZynRv3DS" generalDelegate:self];
+    BOOL ret = [_mapManager start:@"9VZN17lZRmri5UHEY7kdrSZB" generalDelegate:self];
 
 	if (!ret) {
 		NSLog(@"manager start failed!");
@@ -86,7 +86,10 @@ BMKMapManager* _mapManager;
      Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
      */
 }
-
+/**
+ *返回授权验证错误
+ *@param iError 错误号 : 为0时验证通过，具体参加BMKPermissionCheckResultCode
+ */
 - (void)onGetNetworkState:(int)iError
 {
     if (0 == iError) {
