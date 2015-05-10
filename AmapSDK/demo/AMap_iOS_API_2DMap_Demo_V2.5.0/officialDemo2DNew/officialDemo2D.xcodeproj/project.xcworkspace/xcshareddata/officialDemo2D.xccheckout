@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>69AE14AB-2A6F-42F3-87DD-2E95E6231299</string>
 	<key>IDESourceControlProjectName</key>
-	<string>officialDemo2D</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1559AAFFCDEE5BE97C27FBB68332336B21B1130C</key>
 		<string>https://github.com/abbothzhang/locationAlarm.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>AmapSDK/demo/AMap_iOS_API_2DMap_Demo_V2.5.0/officialDemo2DNew/officialDemo2D.xcodeproj</string>
+	<string>AmapSDK/demo/AMap_iOS_API_2DMap_Demo_V2.5.0/officialDemo2DNew/officialDemo2D.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1559AAFFCDEE5BE97C27FBB68332336B21B1130C</key>

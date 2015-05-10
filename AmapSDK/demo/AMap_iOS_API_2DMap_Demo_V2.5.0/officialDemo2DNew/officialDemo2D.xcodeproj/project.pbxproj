@@ -747,6 +747,11 @@
 				CLASSPREFIX = MA;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = AutoNavi;
+				TargetAttributes = {
+					3A05D43317D97856002CF304 = {
+						DevelopmentTeam = 236Q8XURWN;
+					};
+				};
 			};
 			buildConfigurationList = 3A05D42F17D97856002CF304 /* Build configuration list for PBXProject "officialDemo2D" */;
 			compatibilityVersion = "Xcode 3.2";

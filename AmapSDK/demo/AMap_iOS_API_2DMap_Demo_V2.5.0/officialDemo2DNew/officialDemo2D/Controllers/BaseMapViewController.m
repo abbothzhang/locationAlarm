@@ -12,44 +12,28 @@
 @synthesize mapView = _mapView;
 @synthesize search  = _search;
 
-#pragma mark - Utility
-
-- (void)clearMapView
+#pragma mark - Life Cycle
+- (void)viewDidAppear:(BOOL)animated
 {
-    self.mapView.showsUserLocation = NO;
+    [super viewDidAppear:animated];
     
-    [self.mapView removeAnnotations:self.mapView.annotations];
-    
-    [self.mapView removeOverlays:self.mapView.overlays];
-    
-    self.mapView.delegate = nil;
+    self.mapView.visibleMapRect = MAMapRectMake(220880104, 101476980, 272496, 466656);
 }
 
-- (void)clearSearch
+- (void)viewDidLoad
 {
-    self.search.delegate = nil;
-}
-
-#pragma mark - Handle Action
-
-- (void)returnAction
-{
-    [self.navigationController popViewControllerAnimated:YES];
+    [super viewDidLoad];
     
-    [self clearMapView];
+    [self initTitle:self.title];
     
-    [self clearSearch];
+    [self initBaseNavigationBar];
+    
+    [self initMapView];
+    
+    [self initSearch];
 }
 
-#pragma mark - AMapSearchDelegate
-
-- (void)searchRequest:(id)request didFailWithError:(NSError *)error
-{
-    NSLog(@"%s: searchRequest = %@, errInfo= %@", __func__, [request class], error);
-}
-
-#pragma mark - Initialization
-
+#pragma mark - init
 - (void)initMapView
 {
     self.mapView.frame = self.view.bounds;
@@ -84,26 +68,39 @@
     self.navigationItem.titleView = titleLabel;
 }
 
-#pragma mark - Life Cycle
+#pragma mark - AMapSearchDelegate
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)searchRequest:(id)request didFailWithError:(NSError *)error
 {
-    [super viewDidAppear:animated];
-    
-    self.mapView.visibleMapRect = MAMapRectMake(220880104, 101476980, 272496, 466656);
+    NSLog(@"%s: searchRequest = %@, errInfo= %@", __func__, [request class], error);
 }
 
-- (void)viewDidLoad
+#pragma mark - clear
+- (void)clearMapView
 {
-    [super viewDidLoad];
+    self.mapView.showsUserLocation = NO;
     
-    [self initTitle:self.title];
+    [self.mapView removeAnnotations:self.mapView.annotations];
     
-    [self initBaseNavigationBar];
+    [self.mapView removeOverlays:self.mapView.overlays];
     
-    [self initMapView];
-    
-    [self initSearch];
+    self.mapView.delegate = nil;
 }
+
+- (void)clearSearch
+{
+    self.search.delegate = nil;
+}
+
+- (void)returnAction
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    [self clearMapView];
+    
+    [self clearSearch];
+}
+
+
 
 @end

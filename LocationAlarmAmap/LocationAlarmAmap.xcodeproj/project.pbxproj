@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		503B1FC51AFE567D0094457F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B1FC41AFE567D0094457F /* MainViewController.m */; };
+		503B1FC81AFF78DA0094457F /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B1FC71AFF78DA0094457F /* BaseMapViewController.m */; };
+		503EB2651AFF7AB00067DCE9 /* UserLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503EB2641AFF7AB00067DCE9 /* UserLocationViewController.m */; };
+		503EB2671AFF81460067DCE9 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503EB2661AFF81460067DCE9 /* MAMapKit.framework */; };
+		503EB2691AFF81530067DCE9 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503EB2681AFF81530067DCE9 /* AMapSearchKit.framework */; };
+		503EB26B1AFF82620067DCE9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503EB26A1AFF82620067DCE9 /* Security.framework */; };
+		503EB26D1AFFAA120067DCE9 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 503EB26C1AFFAA120067DCE9 /* AMap.bundle */; };
+		503EB2721AFFAA8D0067DCE9 /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = 503EB26F1AFFAA8D0067DCE9 /* compass.png */; };
+		503EB2731AFFAA8D0067DCE9 /* compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 503EB2701AFFAA8D0067DCE9 /* compass@2x.png */; };
+		503EB2741AFFAA8D0067DCE9 /* compass@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 503EB2711AFFAA8D0067DCE9 /* compass@3x.png */; };
 		505510431AF7B37E0033952B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 505510421AF7B37E0033952B /* main.m */; };
 		505510461AF7B37E0033952B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 505510451AF7B37E0033952B /* AppDelegate.m */; };
 		505510491AF7B37E0033952B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505510481AF7B37E0033952B /* ViewController.m */; };
@@ -14,6 +24,7 @@
 		5055104E1AF7B37E0033952B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5055104D1AF7B37E0033952B /* Images.xcassets */; };
 		505510511AF7B37E0033952B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5055104F1AF7B37E0033952B /* LaunchScreen.xib */; };
 		5055105D1AF7B37E0033952B /* LocationAlarmAmapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055105C1AF7B37E0033952B /* LocationAlarmAmapTests.m */; };
+		C89E97F4F516C2F5F47858B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E70B941A41B1AE67A4C3E41D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +38,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B98F9807026EA2A34E51337 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		257D5ADDC1AE59C5177B866F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		503B1FC31AFE567D0094457F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Controller/MainViewController.h; sourceTree = "<group>"; };
+		503B1FC41AFE567D0094457F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Controller/MainViewController.m; sourceTree = "<group>"; };
+		503B1FC61AFF78DA0094457F /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
+		503B1FC71AFF78DA0094457F /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
+		503EB2631AFF7AB00067DCE9 /* UserLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationViewController.h; sourceTree = "<group>"; };
+		503EB2641AFF7AB00067DCE9 /* UserLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationViewController.m; sourceTree = "<group>"; };
+		503EB2661AFF81460067DCE9 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		503EB2681AFF81530067DCE9 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		503EB26A1AFF82620067DCE9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		503EB26C1AFFAA120067DCE9 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
+		503EB26F1AFFAA8D0067DCE9 /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass.png; sourceTree = "<group>"; };
+		503EB2701AFFAA8D0067DCE9 /* compass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass@2x.png"; sourceTree = "<group>"; };
+		503EB2711AFFAA8D0067DCE9 /* compass@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass@3x.png"; sourceTree = "<group>"; };
 		5055103D1AF7B37E0033952B /* LocationAlarmAmap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationAlarmAmap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		505510411AF7B37E0033952B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		505510421AF7B37E0033952B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +66,7 @@
 		505510561AF7B37E0033952B /* LocationAlarmAmapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationAlarmAmapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5055105B1AF7B37E0033952B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5055105C1AF7B37E0033952B /* LocationAlarmAmapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationAlarmAmapTests.m; sourceTree = "<group>"; };
+		E70B941A41B1AE67A4C3E41D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503EB26B1AFF82620067DCE9 /* Security.framework in Frameworks */,
+				503EB2691AFF81530067DCE9 /* AMapSearchKit.framework in Frameworks */,
+				503EB2671AFF81460067DCE9 /* MAMapKit.framework in Frameworks */,
+				C89E97F4F516C2F5F47858B7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +91,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DF175256472F7D1030220E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E70B941A41B1AE67A4C3E41D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		503B1FBF1AFE55630094457F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				503B1FC61AFF78DA0094457F /* BaseMapViewController.h */,
+				503B1FC71AFF78DA0094457F /* BaseMapViewController.m */,
+				503EB2631AFF7AB00067DCE9 /* UserLocationViewController.h */,
+				503EB2641AFF7AB00067DCE9 /* UserLocationViewController.m */,
+				503B1FC31AFE567D0094457F /* MainViewController.h */,
+				503B1FC41AFE567D0094457F /* MainViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		503B1FC01AFE55700094457F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		503B1FC11AFE55760094457F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		503B1FC21AFE55840094457F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		503EB26E1AFFAA750067DCE9 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				503EB26F1AFFAA8D0067DCE9 /* compass.png */,
+				503EB2701AFFAA8D0067DCE9 /* compass@2x.png */,
+				503EB2711AFFAA8D0067DCE9 /* compass@3x.png */,
+			);
+			name = imgs;
+			sourceTree = "<group>";
+		};
 		505510341AF7B37E0033952B = {
 			isa = PBXGroup;
 			children = (
 				5055103F1AF7B37E0033952B /* LocationAlarmAmap */,
 				505510591AF7B37E0033952B /* LocationAlarmAmapTests */,
 				5055103E1AF7B37E0033952B /* Products */,
+				B9DC1AE445C7097B0321DFFD /* Pods */,
+				3DF175256472F7D1030220E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,13 +166,10 @@
 		5055103F1AF7B37E0033952B /* LocationAlarmAmap */ = {
 			isa = PBXGroup;
 			children = (
-				505510441AF7B37E0033952B /* AppDelegate.h */,
-				505510451AF7B37E0033952B /* AppDelegate.m */,
-				505510471AF7B37E0033952B /* ViewController.h */,
-				505510481AF7B37E0033952B /* ViewController.m */,
-				5055104A1AF7B37E0033952B /* Main.storyboard */,
-				5055104D1AF7B37E0033952B /* Images.xcassets */,
-				5055104F1AF7B37E0033952B /* LaunchScreen.xib */,
+				503B1FC21AFE55840094457F /* Util */,
+				503B1FC11AFE55760094457F /* Model */,
+				503B1FC01AFE55700094457F /* View */,
+				503B1FBF1AFE55630094457F /* Controller */,
 				505510401AF7B37E0033952B /* Supporting Files */,
 			);
 			path = LocationAlarmAmap;
@@ -96,6 +178,18 @@
 		505510401AF7B37E0033952B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				503EB26E1AFFAA750067DCE9 /* imgs */,
+				503EB26C1AFFAA120067DCE9 /* AMap.bundle */,
+				503EB26A1AFF82620067DCE9 /* Security.framework */,
+				503EB2681AFF81530067DCE9 /* AMapSearchKit.framework */,
+				503EB2661AFF81460067DCE9 /* MAMapKit.framework */,
+				505510441AF7B37E0033952B /* AppDelegate.h */,
+				505510451AF7B37E0033952B /* AppDelegate.m */,
+				505510471AF7B37E0033952B /* ViewController.h */,
+				505510481AF7B37E0033952B /* ViewController.m */,
+				5055104A1AF7B37E0033952B /* Main.storyboard */,
+				5055104D1AF7B37E0033952B /* Images.xcassets */,
+				5055104F1AF7B37E0033952B /* LaunchScreen.xib */,
 				505510411AF7B37E0033952B /* Info.plist */,
 				505510421AF7B37E0033952B /* main.m */,
 			);
@@ -119,6 +213,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B9DC1AE445C7097B0321DFFD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B98F9807026EA2A34E51337 /* Pods.debug.xcconfig */,
+				257D5ADDC1AE59C5177B866F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 505510601AF7B37E0033952B /* Build configuration list for PBXNativeTarget "LocationAlarmAmap" */;
 			buildPhases = (
+				3812881DA771BDDEDCD986B6 /* Check Pods Manifest.lock */,
 				505510391AF7B37E0033952B /* Sources */,
 				5055103A1AF7B37E0033952B /* Frameworks */,
 				5055103B1AF7B37E0033952B /* Resources */,
+				7D0DC9D5AC5E951CBFA481C4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +273,7 @@
 				TargetAttributes = {
 					5055103C1AF7B37E0033952B = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 236Q8XURWN;
 					};
 					505510551AF7B37E0033952B = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -201,7 +307,11 @@
 			files = (
 				5055104C1AF7B37E0033952B /* Main.storyboard in Resources */,
 				505510511AF7B37E0033952B /* LaunchScreen.xib in Resources */,
+				503EB26D1AFFAA120067DCE9 /* AMap.bundle in Resources */,
 				5055104E1AF7B37E0033952B /* Images.xcassets in Resources */,
+				503EB2741AFFAA8D0067DCE9 /* compass@3x.png in Resources */,
+				503EB2721AFFAA8D0067DCE9 /* compass.png in Resources */,
+				503EB2731AFFAA8D0067DCE9 /* compass@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +324,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3812881DA771BDDEDCD986B6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7D0DC9D5AC5E951CBFA481C4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		505510391AF7B37E0033952B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503EB2651AFF7AB00067DCE9 /* UserLocationViewController.m in Sources */,
 				505510491AF7B37E0033952B /* ViewController.m in Sources */,
+				503B1FC81AFF78DA0094457F /* BaseMapViewController.m in Sources */,
 				505510461AF7B37E0033952B /* AppDelegate.m in Sources */,
 				505510431AF7B37E0033952B /* main.m in Sources */,
+				503B1FC51AFE567D0094457F /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,21 +491,39 @@
 		};
 		505510611AF7B37E0033952B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B98F9807026EA2A34E51337 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LocationAlarmAmap",
+				);
 				INFOPLIST_FILE = LocationAlarmAmap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		505510621AF7B37E0033952B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 257D5ADDC1AE59C5177B866F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LocationAlarmAmap",
+				);
 				INFOPLIST_FILE = LocationAlarmAmap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -416,6 +580,7 @@
 				505510621AF7B37E0033952B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		505510631AF7B37E0033952B /* Build configuration list for PBXNativeTarget "LocationAlarmAmapTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +589,7 @@
 				505510651AF7B37E0033952B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

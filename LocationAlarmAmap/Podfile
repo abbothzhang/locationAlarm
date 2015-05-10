@@ -1,0 +1,12 @@
+
+
+
+#AFNetworking 2.x要求ios6及以上，1.x要求ios5及以上
+#pod 'AFNetworking', '~> 1.0'
+#pod 'SDWebImage', '~>3.6'
+#pod 'MBProgressHUD', '~> 0.8'
+
+#高德地图
+pod 'AMap3DMap' #3D地图SDK
+pod 'AMap2DMap' #2D地图SDK(2D地图和3D地图不能同时使用)
+pod 'AMapSearch' #搜索服务SDK
