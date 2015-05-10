@@ -8,7 +8,10 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "UserLocationViewController.h"
+#import "MapViewController.h"
+#import "SettiongViewController.h"
+#import "ImageUtil.h"
+
 @interface AppDelegate ()
 
 @end
@@ -18,16 +21,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
-    MainViewController *mainViewController = [[MainViewController alloc] init];
-    [MAMapServices sharedServices].apiKey = @"2e661c0d2f8ac10f653a37c6221c1714";
-    UserLocationViewController *locationVC = [[UserLocationViewController alloc] init];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:locationVC];
-    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+    [MAMapServices sharedServices].apiKey = @"2e661c0d2f8ac10f653a37c6221c1714";
+    
+    MapViewController *mapVc = [[MapViewController alloc] init];
+    SettiongViewController *settiongVC = [[SettiongViewController alloc] init];
+    
+    UIImage *img1Nor = [UIImage imageNamed:@"img1.png"];
+    img1Nor = [ImageUtil scaleImg:img1Nor toScale:0.3];
+    
+//    tableVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"列表"image:img1Nor selectedImage:img1Nor];
+    mapVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"地图"image:img1Nor selectedImage:img1Nor];
+    settiongVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"设置"image:img1Nor selectedImage:img1Nor];
+    
+//    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:tableVC];
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:mapVc];
+    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:settiongVC];
+    
+    NSArray *vcArray = @[nav2,nav3];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = vcArray;
+    tabBarVC.selectedIndex = 0;
+    self.window.rootViewController = tabBarVC;
+    
+
     return YES;
 }
 

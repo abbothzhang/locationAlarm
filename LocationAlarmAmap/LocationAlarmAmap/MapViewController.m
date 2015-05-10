@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 songjian. All rights reserved.
 //
 
-#import "UserLocationViewController.h"
+#import "MapViewController.h"
 
-@interface UserLocationViewController ()
+@interface MapViewController ()
 
 @property (nonatomic, retain)UISegmentedControl *showSegment;
 
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation UserLocationViewController
+@implementation MapViewController
 @synthesize showSegment, modeSegment;
 
 #pragma mark - Life Cycle
