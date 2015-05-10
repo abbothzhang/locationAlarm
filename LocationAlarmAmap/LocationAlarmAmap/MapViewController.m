@@ -20,13 +20,6 @@
 @synthesize showSegment, modeSegment;
 
 #pragma mark - Life Cycle
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-        [self initToolBar];
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -35,12 +28,21 @@
     [self.mapView setCompassImage:[UIImage imageNamed:@"compass"]];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self initToolBar];
+    self.mapView.showsUserLocation = YES;
+    self.mapView.userTrackingMode = MAUserTrackingModeFollow;
+    self.mapView.zoomLevel = 13.5;
+}
+
+
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    self.mapView.showsUserLocation = YES;
-    self.mapView.userTrackingMode = MAUserTrackingModeFollow;
+
 }
 
 - (void)viewDidDisappear:(BOOL)animated

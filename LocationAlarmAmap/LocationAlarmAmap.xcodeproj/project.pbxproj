@@ -10,9 +10,6 @@
 		503B1FC51AFE567D0094457F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B1FC41AFE567D0094457F /* MainViewController.m */; };
 		503B1FC81AFF78DA0094457F /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B1FC71AFF78DA0094457F /* BaseMapViewController.m */; };
 		503EB2651AFF7AB00067DCE9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503EB2641AFF7AB00067DCE9 /* MapViewController.m */; };
-		503EB2671AFF81460067DCE9 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503EB2661AFF81460067DCE9 /* MAMapKit.framework */; };
-		503EB2691AFF81530067DCE9 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503EB2681AFF81530067DCE9 /* AMapSearchKit.framework */; };
-		503EB26B1AFF82620067DCE9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503EB26A1AFF82620067DCE9 /* Security.framework */; };
 		503EB26D1AFFAA120067DCE9 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 503EB26C1AFFAA120067DCE9 /* AMap.bundle */; };
 		503EB2721AFFAA8D0067DCE9 /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = 503EB26F1AFFAA8D0067DCE9 /* compass.png */; };
 		503EB2731AFFAA8D0067DCE9 /* compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 503EB2701AFFAA8D0067DCE9 /* compass@2x.png */; };
@@ -50,9 +47,6 @@
 		503B1FC71AFF78DA0094457F /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
 		503EB2631AFF7AB00067DCE9 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		503EB2641AFF7AB00067DCE9 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		503EB2661AFF81460067DCE9 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
-		503EB2681AFF81530067DCE9 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
-		503EB26A1AFF82620067DCE9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		503EB26C1AFFAA120067DCE9 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
 		503EB26F1AFFAA8D0067DCE9 /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass.png; sourceTree = "<group>"; };
 		503EB2701AFFAA8D0067DCE9 /* compass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass@2x.png"; sourceTree = "<group>"; };
@@ -86,9 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				503EB26B1AFF82620067DCE9 /* Security.framework in Frameworks */,
-				503EB2691AFF81530067DCE9 /* AMapSearchKit.framework in Frameworks */,
-				503EB2671AFF81460067DCE9 /* MAMapKit.framework in Frameworks */,
 				C89E97F4F516C2F5F47858B7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,9 +190,6 @@
 			children = (
 				503EB26E1AFFAA750067DCE9 /* imgs */,
 				503EB26C1AFFAA120067DCE9 /* AMap.bundle */,
-				503EB26A1AFF82620067DCE9 /* Security.framework */,
-				503EB2681AFF81530067DCE9 /* AMapSearchKit.framework */,
-				503EB2661AFF81460067DCE9 /* MAMapKit.framework */,
 				505510441AF7B37E0033952B /* AppDelegate.h */,
 				505510451AF7B37E0033952B /* AppDelegate.m */,
 				505510471AF7B37E0033952B /* ViewController.h */,
