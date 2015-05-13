@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
     
-    [self initTitle:self.title];
+//    [self initTitle:self.title];
     
 //    [self initBaseNavigationBar];
     

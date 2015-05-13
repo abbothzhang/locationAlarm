@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502839E31B00FF48001B9C2D /* AlarmInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839E01B00FF48001B9C2D /* AlarmInfo.m */; };
+		502839E41B00FF48001B9C2D /* UserLocationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839E21B00FF48001B9C2D /* UserLocationInfo.m */; };
+		502839E91B00FF55001B9C2D /* ZHHint.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839E61B00FF55001B9C2D /* ZHHint.m */; };
+		502839EA1B00FF55001B9C2D /* AlarmTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839E81B00FF55001B9C2D /* AlarmTableCell.m */; };
+		502839ED1B01013B001B9C2D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839EC1B01013B001B9C2D /* MBProgressHUD.m */; };
+		503B0B491B024CC1002C6DDF /* LocationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B0B481B024CC1002C6DDF /* LocationInfo.m */; };
 		503B1FC51AFE567D0094457F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B1FC41AFE567D0094457F /* MainViewController.m */; };
 		503B1FC81AFF78DA0094457F /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B1FC71AFF78DA0094457F /* BaseMapViewController.m */; };
 		503EB2651AFF7AB00067DCE9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503EB2641AFF7AB00067DCE9 /* MapViewController.m */; };
@@ -41,6 +47,18 @@
 /* Begin PBXFileReference section */
 		0B98F9807026EA2A34E51337 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		257D5ADDC1AE59C5177B866F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		502839DF1B00FF48001B9C2D /* AlarmInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmInfo.h; sourceTree = "<group>"; };
+		502839E01B00FF48001B9C2D /* AlarmInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmInfo.m; sourceTree = "<group>"; };
+		502839E11B00FF48001B9C2D /* UserLocationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationInfo.h; sourceTree = "<group>"; };
+		502839E21B00FF48001B9C2D /* UserLocationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationInfo.m; sourceTree = "<group>"; };
+		502839E51B00FF55001B9C2D /* ZHHint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHHint.h; sourceTree = "<group>"; };
+		502839E61B00FF55001B9C2D /* ZHHint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHHint.m; sourceTree = "<group>"; };
+		502839E71B00FF55001B9C2D /* AlarmTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmTableCell.h; sourceTree = "<group>"; };
+		502839E81B00FF55001B9C2D /* AlarmTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTableCell.m; sourceTree = "<group>"; };
+		502839EB1B01013B001B9C2D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		502839EC1B01013B001B9C2D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		503B0B471B024CC1002C6DDF /* LocationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationInfo.h; path = Model/LocationInfo.h; sourceTree = "<group>"; };
+		503B0B481B024CC1002C6DDF /* LocationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationInfo.m; path = Model/LocationInfo.m; sourceTree = "<group>"; };
 		503B1FC31AFE567D0094457F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Controller/MainViewController.h; sourceTree = "<group>"; };
 		503B1FC41AFE567D0094457F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Controller/MainViewController.m; sourceTree = "<group>"; };
 		503B1FC61AFF78DA0094457F /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
@@ -120,6 +138,12 @@
 		503B1FC01AFE55700094457F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				502839E51B00FF55001B9C2D /* ZHHint.h */,
+				502839E61B00FF55001B9C2D /* ZHHint.m */,
+				502839EB1B01013B001B9C2D /* MBProgressHUD.h */,
+				502839EC1B01013B001B9C2D /* MBProgressHUD.m */,
+				502839E71B00FF55001B9C2D /* AlarmTableCell.h */,
+				502839E81B00FF55001B9C2D /* AlarmTableCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -127,6 +151,12 @@
 		503B1FC11AFE55760094457F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				502839DF1B00FF48001B9C2D /* AlarmInfo.h */,
+				502839E01B00FF48001B9C2D /* AlarmInfo.m */,
+				502839E11B00FF48001B9C2D /* UserLocationInfo.h */,
+				502839E21B00FF48001B9C2D /* UserLocationInfo.m */,
+				503B0B471B024CC1002C6DDF /* LocationInfo.h */,
+				503B0B481B024CC1002C6DDF /* LocationInfo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -379,7 +409,13 @@
 				505510431AF7B37E0033952B /* main.m in Sources */,
 				503EB2771AFFAFF30067DCE9 /* SettiongViewController.m in Sources */,
 				503B1FC51AFE567D0094457F /* MainViewController.m in Sources */,
+				502839E91B00FF55001B9C2D /* ZHHint.m in Sources */,
+				502839EA1B00FF55001B9C2D /* AlarmTableCell.m in Sources */,
+				502839E41B00FF48001B9C2D /* UserLocationInfo.m in Sources */,
 				503EB2821AFFB0660067DCE9 /* ImageUtil.m in Sources */,
+				503B0B491B024CC1002C6DDF /* LocationInfo.m in Sources */,
+				502839E31B00FF48001B9C2D /* AlarmInfo.m in Sources */,
+				502839ED1B01013B001B9C2D /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
