@@ -31,6 +31,8 @@
 		5055104E1AF7B37E0033952B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5055104D1AF7B37E0033952B /* Images.xcassets */; };
 		505510511AF7B37E0033952B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5055104F1AF7B37E0033952B /* LaunchScreen.xib */; };
 		5055105D1AF7B37E0033952B /* LocationAlarmAmapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055105C1AF7B37E0033952B /* LocationAlarmAmapTests.m */; };
+		50F19BDE1B042B86006E089D /* AlarmDistanceSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F19BDD1B042B86006E089D /* AlarmDistanceSetViewController.m */; };
+		50F19BE81B04E255006E089D /* ZHHUDActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F19BE71B04E255006E089D /* ZHHUDActivityView.m */; };
 		C89E97F4F516C2F5F47858B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E70B941A41B1AE67A4C3E41D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,10 @@
 		505510561AF7B37E0033952B /* LocationAlarmAmapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationAlarmAmapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5055105B1AF7B37E0033952B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5055105C1AF7B37E0033952B /* LocationAlarmAmapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationAlarmAmapTests.m; sourceTree = "<group>"; };
+		50F19BDC1B042B86006E089D /* AlarmDistanceSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlarmDistanceSetViewController.h; path = Controller/AlarmDistanceSetViewController.h; sourceTree = "<group>"; };
+		50F19BDD1B042B86006E089D /* AlarmDistanceSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlarmDistanceSetViewController.m; path = Controller/AlarmDistanceSetViewController.m; sourceTree = "<group>"; };
+		50F19BE61B04E255006E089D /* ZHHUDActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHHUDActivityView.h; sourceTree = "<group>"; };
+		50F19BE71B04E255006E089D /* ZHHUDActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHHUDActivityView.m; sourceTree = "<group>"; };
 		E70B941A41B1AE67A4C3E41D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -131,6 +137,8 @@
 				503B1FC41AFE567D0094457F /* MainViewController.m */,
 				503EB2751AFFAFF30067DCE9 /* SettiongViewController.h */,
 				503EB2761AFFAFF30067DCE9 /* SettiongViewController.m */,
+				50F19BDC1B042B86006E089D /* AlarmDistanceSetViewController.h */,
+				50F19BDD1B042B86006E089D /* AlarmDistanceSetViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -138,6 +146,8 @@
 		503B1FC01AFE55700094457F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50F19BE61B04E255006E089D /* ZHHUDActivityView.h */,
+				50F19BE71B04E255006E089D /* ZHHUDActivityView.m */,
 				502839E51B00FF55001B9C2D /* ZHHint.h */,
 				502839E61B00FF55001B9C2D /* ZHHint.m */,
 				502839EB1B01013B001B9C2D /* MBProgressHUD.h */,
@@ -403,6 +413,7 @@
 			files = (
 				503EB2831AFFB0660067DCE9 /* Utils.m in Sources */,
 				503EB2651AFF7AB00067DCE9 /* MapViewController.m in Sources */,
+				50F19BE81B04E255006E089D /* ZHHUDActivityView.m in Sources */,
 				505510491AF7B37E0033952B /* ViewController.m in Sources */,
 				503B1FC81AFF78DA0094457F /* BaseMapViewController.m in Sources */,
 				505510461AF7B37E0033952B /* AppDelegate.m in Sources */,
@@ -413,6 +424,7 @@
 				502839EA1B00FF55001B9C2D /* AlarmTableCell.m in Sources */,
 				502839E41B00FF48001B9C2D /* UserLocationInfo.m in Sources */,
 				503EB2821AFFB0660067DCE9 /* ImageUtil.m in Sources */,
+				50F19BDE1B042B86006E089D /* AlarmDistanceSetViewController.m in Sources */,
 				503B0B491B024CC1002C6DDF /* LocationInfo.m in Sources */,
 				502839E31B00FF48001B9C2D /* AlarmInfo.m in Sources */,
 				502839ED1B01013B001B9C2D /* MBProgressHUD.m in Sources */,

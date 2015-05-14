@@ -10,16 +10,25 @@
 #import "UserLocationInfo.h"
 #import "LocationInfo.h"
 #import "ZHHint.h"
+#import "AlarmDistanceSetViewController.h"
+#import "ZHHUDActivityView.h"
+#import "Utils.h"
+
 
 #define ANIM_TIME_TABLEVIEW     0.2
 
 @interface MapViewController ()<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, retain)UISegmentedControl *showSegment;
-@property (nonatomic, retain)UISegmentedControl *modeSegment;
+@property (nonatomic,strong) ZHHUDActivityView                  *hudView;
 
-@property (nonatomic,strong) UITableView        *searchResultTableView;
-@property (nonatomic,strong) NSMutableArray     *tableArray;
+@property (nonatomic, retain)UISegmentedControl                 *showSegment;
+@property (nonatomic, retain)UISegmentedControl                 *modeSegment;
+
+@property (nonatomic,strong) UITableView                        *searchResultTableView;
+@property (nonatomic,strong) UIView                             *tableBgView;
+@property (nonatomic,strong) UITapGestureRecognizer             *tableBgTapGes;
+@property (nonatomic,strong) NSMutableArray                     *tableArray;
+
 
 @end
 
@@ -45,6 +54,10 @@
     self.mapView.showsUserLocation = YES;
     self.mapView.userTrackingMode = MAUserTrackingModeFollow;
     self.mapView.zoomLevel = 13.5;
+    
+    _hudView = [[ZHHUDActivityView alloc] initWithFrame:CGRectMake(0, 0, 150*WITH_SCALE, 150*WITH_SCALE) showTip:YES];
+    _hudView.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2);
+
 }
 
 
@@ -64,10 +77,19 @@
 #pragma mark - init
 
 -(void)initSearchResultTableView{
+    
+    self.tableBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 399, self.view.bounds.size.width, self.view.frame.size.height - 99)];
+    self.tableBgView.backgroundColor = [UIColor blackColor];
+    self.tableBgView.alpha = 0.8;
+    self.tableBgTapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideTableView)];
+    [self.tableBgView addGestureRecognizer:self.tableBgTapGes];
+    
     self.searchResultTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 99, self.view.bounds.size.width, 0)];
     self.searchResultTableView.delegate = self;
     self.searchResultTableView.dataSource = self;
     [self.view addSubview:self.searchResultTableView];
+    
+
     
     self.tableArray = [[NSMutableArray alloc] initWithCapacity:5];
 }
@@ -119,7 +141,10 @@
 // called when keyboard search button pressed
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
-
+    
+    _hudView.textLabel.text = @"正在搜索...";
+    [_hudView animateShowInView:self.view];
+    
     //构造AMapPlaceSearchRequest对象，配置关键字搜索参数
     AMapPlaceSearchRequest *poiRequest = [[AMapPlaceSearchRequest alloc] init];
     poiRequest.searchType = AMapSearchType_PlaceKeyword;
@@ -162,10 +187,14 @@
     }
     MapViewController __weak *weakSelf = self;
     [UIView animateWithDuration:ANIM_TIME_TABLEVIEW animations:^{
+        [weakSelf.view addSubview:weakSelf.tableBgView];
         weakSelf.searchResultTableView.frame = CGRectMake(0, 99, weakSelf.view.frame.size.width, 300);
+        
     }];
     
     [self.searchResultTableView reloadData];
+    [_hudView animateToHide];
+    
     NSString *result = [NSString stringWithFormat:@"%@ \n %@ \n %@", strCount, strSuggestion, strPoi];
     NSLog(@"Place: %@", result);
 }
@@ -177,7 +206,7 @@
     pointAnnotation.title = title;
     pointAnnotation.subtitle = subTitle;
     [self.mapView addAnnotation:pointAnnotation];
-     [self.mapView selectAnnotation:pointAnnotation animated:YES];
+    [self.mapView selectAnnotation:pointAnnotation animated:YES];
 }
 
 //定位后发起逆地理编码，在这里实现逆地理编码的回调函数
@@ -273,14 +302,22 @@ updatingLocation:(BOOL)updatingLocation
     
     MapViewController __weak *weakSelf = self;
     [UIView animateWithDuration:ANIM_TIME_TABLEVIEW animations:^{
-        weakSelf.searchResultTableView.frame = CGRectMake(0, 99, weakSelf.view.frame.size.width, 0);
-        weakSelf.mapView.zoomLevel = 11;
+        [weakSelf hideTableView];
+        CLLocationCoordinate2D centerPoint = CLLocationCoordinate2DMake(locInfo.latitude, locInfo.longtitude);
+        [weakSelf.mapView setCenterCoordinate:centerPoint animated:YES];
+        
     }];
 }
 
 
 
 #pragma mark - Action Handle
+-(void)hideTableView{
+    MapViewController __weak *weakSelf = self;
+    [weakSelf.tableBgView removeFromSuperview];
+    weakSelf.searchResultTableView.frame = CGRectMake(0, 99, weakSelf.view.frame.size.width, 0);
+    
+}
 
 - (void)showsSegmentAction:(UISegmentedControl *)sender
 {
@@ -294,6 +331,9 @@ updatingLocation:(BOOL)updatingLocation
 
 -(void)popClick:(id)sender{
     [ZHHint showToast:@"pop click"];
+    AlarmDistanceSetViewController *disVC = [[AlarmDistanceSetViewController alloc] init];
+    [self.navigationController pushViewController:disVC animated:YES];
+    
 }
 
 #pragma mark - NSKeyValueObservering
@@ -314,7 +354,7 @@ updatingLocation:(BOOL)updatingLocation
 - (void)returnAction
 {
     [super returnAction];
-    
+    [self.tableBgView removeGestureRecognizer:self.tableBgTapGes];
     self.mapView.userTrackingMode  = MAUserTrackingModeNone;
     
     [self.mapView removeObserver:self forKeyPath:@"showsUserLocation"];
