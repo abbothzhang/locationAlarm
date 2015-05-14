@@ -175,6 +175,7 @@
     NSString *strCount = [NSString stringWithFormat:@"count: %ld",response.count];
     NSString *strSuggestion = [NSString stringWithFormat:@"Suggestion: %@", response.suggestion];
     NSString *strPoi = @"";
+    [self.tableArray removeAllObjects];
     for (AMapPOI *p in response.pois) {
         strPoi = [NSString stringWithFormat:@"%@\nPOI: %@", strPoi, p.description];
 //        [self addPointToMapWithTitle:p.name subTitle:p.address latitude:p.location.latitude longtitude:p.location.longitude];
@@ -330,7 +331,6 @@ updatingLocation:(BOOL)updatingLocation
 }
 
 -(void)popClick:(id)sender{
-    [ZHHint showToast:@"pop click"];
     AlarmDistanceSetViewController *disVC = [[AlarmDistanceSetViewController alloc] init];
     [self.navigationController pushViewController:disVC animated:YES];
     
