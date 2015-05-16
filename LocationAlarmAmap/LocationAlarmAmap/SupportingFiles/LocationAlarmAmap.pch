@@ -16,4 +16,6 @@
 #import "Utils.h"
 #import "UIButton+Bootstrap.h"
 #import "NSString+FontAwesome.h"
+#import "ZHHint.h"
+
 #endif

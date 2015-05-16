@@ -7,13 +7,36 @@
 //
 
 #import "AlarmDistanceSetViewController.h"
+#import "LocationInfo.h"
+#import "AlarmInfo.h"
 
 
 @interface AlarmDistanceSetViewController ()<UITextFieldDelegate>
 
+@property (nonatomic,strong) LocationInfo           *locationInfo;
+@property (nonatomic) double                        distance;
+
+@property (nonatomic,strong) UITextField *distanceFiled;
+//@property (nonatomic,strong) UIButton               *addAlarmBtn;
+
 @end
 
 @implementation AlarmDistanceSetViewController
+
+
+-(instancetype)initWithAlarmLocationInfo:(LocationInfo*)locationInfo{
+    if (!locationInfo) {
+        return nil;
+    }
+    
+    self = [super init];
+    if (self) {
+        self.locationInfo = locationInfo;
+    }
+    
+    return self;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,30 +45,81 @@
 
 }
 
+#pragma mark - init
+
 -(void)initView{
     //init textField
-    UITextField *distanceFiled = [[UITextField alloc] initWithFrame:CGRectMake(50, 180, self.view.frame.size.width - 100, 50)];
-    distanceFiled.delegate = self;
-    distanceFiled.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height - 460*HEIGHT_SCALE);
-    distanceFiled.placeholder = @"距离多少米时提醒您?";
-    distanceFiled.borderStyle = UITextBorderStyleRoundedRect;
-    distanceFiled.textAlignment = NSTextAlignmentCenter;
-    distanceFiled.keyboardType = UIKeyboardTypeNumberPad;
-    [self.view addSubview:distanceFiled];
+    _distanceFiled = [[UITextField alloc] initWithFrame:CGRectMake(50, 180, self.view.frame.size.width - 100, 50)];
+    _distanceFiled.delegate = self;
+    _distanceFiled.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height - 460*HEIGHT_SCALE);
+    _distanceFiled.placeholder = @"距离多少米时提醒您?";
+    _distanceFiled.borderStyle = UITextBorderStyleRoundedRect;
+    _distanceFiled.textAlignment = NSTextAlignmentCenter;
+    _distanceFiled.keyboardType = UIKeyboardTypeNumberPad;
+    [self.view addSubview:_distanceFiled];
    
     //initBtn
-    UIButton *addAlarmBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 35)];
-    addAlarmBtn.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height- 390*HEIGHT_SCALE);
-    [addAlarmBtn setTitle:@"添加闹钟" forState:UIControlStateNormal];
-//    addAlarmBtn.backgroundColor = [UIColor grayColor];
-    addAlarmBtn.alpha = 0.8;
-    [addAlarmBtn primaryStyle];
-    [self.view addSubview:addAlarmBtn];
+    UIButton *_addAlarmBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 35)];
+    _addAlarmBtn.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height- 390*HEIGHT_SCALE);
+    [_addAlarmBtn setTitle:@"添加闹钟" forState:UIControlStateNormal];
+    [_addAlarmBtn addTarget:self action:@selector(addAlarmBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    _addAlarmBtn.alpha = 0.4;
+    [_addAlarmBtn primaryStyle];
+    [self.view addSubview:_addAlarmBtn];
     
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField{
+#pragma action
+//
+-(void)addAlarmBtnClick:(id)sender{
+    if (_distanceFiled) {
+        [_distanceFiled resignFirstResponder];
+    }
     
+    if (self.distance < 0) {
+        [ZHHint showToast:@"距离不能小于0哦"];
+        return;
+    }
+    if (self.distance > 2000) {
+        [ZHHint showToast:@"距离不能大于2000米哦"];
+        return;
+    }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    AlarmInfo *alarmInfo = [[AlarmInfo alloc] init];
+    alarmInfo.alarmOpened = YES;
+    alarmInfo.distance = self.distance;
+    
+//    alarmInfo.locationInfo = self.locationInfo;
+//    alarmInfo.name = self.locationInfo.name;
+//    alarmInfo.latitude = self.locationInfo.latitude;
+//    alarmInfo.longtitude = self.locationInfo.longtitude;
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:alarmInfo];
+    
+    NSMutableArray *array = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:@"alarmArray"]];
+    if (!array) {
+        array = [[NSMutableArray alloc] initWithObjects:data, nil];
+    }else{
+        [array addObject:data];
+    }
+    [defaults setValue:array forKey:@"alarmArray"];
+    [ZHHint showToast:@"添加成功!"];
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+    
+}
+
+#pragma mark - UITextFieldDelegate
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    self.distance = [textField.text doubleValue];
+    if (self.distance < 0) {
+        [ZHHint showToast:@"距离不能小于0哦"];
+    }
+    if (self.distance > 2000) {
+        [ZHHint showToast:@"距离不能大于2000米哦"];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

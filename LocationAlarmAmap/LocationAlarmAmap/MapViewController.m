@@ -28,7 +28,7 @@
 @property (nonatomic,strong) UIView                             *tableBgView;
 @property (nonatomic,strong) UITapGestureRecognizer             *tableBgTapGes;
 @property (nonatomic,strong) NSMutableArray                     *tableArray;
-
+@property (nonatomic,strong) LocationInfo                       *addAlarmLocationInfo;
 
 @end
 
@@ -299,6 +299,7 @@ updatingLocation:(BOOL)updatingLocation
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     LocationInfo *locInfo = [self.tableArray objectAtIndex:indexPath.row];
+    _addAlarmLocationInfo = locInfo;
     [self addPointToMapWithTitle:locInfo.name subTitle:locInfo.address latitude:locInfo.latitude longtitude:locInfo.longtitude];
     
     MapViewController __weak *weakSelf = self;
@@ -331,8 +332,17 @@ updatingLocation:(BOOL)updatingLocation
 }
 
 -(void)popClick:(id)sender{
-    AlarmDistanceSetViewController *disVC = [[AlarmDistanceSetViewController alloc] init];
-    [self.navigationController pushViewController:disVC animated:YES];
+    if (!_addAlarmLocationInfo) {
+        return;
+    }
+    AlarmDistanceSetViewController *disVC = [[AlarmDistanceSetViewController alloc] initWithAlarmLocationInfo:_addAlarmLocationInfo];
+    if (!disVC) {
+        return;
+    }
+//    [self.navigationController pushViewController:disVC animated:YES];
+    [self presentViewController:disVC animated:YES completion:^{
+        
+    }];
     
 }
 

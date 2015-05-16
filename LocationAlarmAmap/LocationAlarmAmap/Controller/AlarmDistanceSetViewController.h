@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class LocationInfo;
+
 @interface AlarmDistanceSetViewController : UIViewController
+
+-(instancetype)initWithAlarmLocationInfo:(LocationInfo*)locationInfo;
 
 @end

@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LocationInfo.h"
 
 @interface AlarmInfo : NSObject
 
 @property (nonatomic) BOOL                  alarmOpened;
-@property (nonatomic,strong)NSString        *locationName;
-@property (nonatomic) int                   distance;
-@property (nonatomic) double                latitude;
-@property (nonatomic) double                longtitude;
+@property (nonatomic) double                distance;
+@property (nonatomic,strong) LocationInfo   *locationInfo;
+
+//@property (nonatomic,strong)NSString        *name;
+//@property (nonatomic) double                latitude;
+//@property (nonatomic) double                longtitude;
 
 @end
