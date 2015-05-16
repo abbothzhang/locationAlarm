@@ -19,6 +19,7 @@
     if (self) {
         self.city = [aDecoder decodeObjectForKey:@"city"];
         self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.address = [aDecoder decodeObjectForKey:@"address"];
         self.latitude = [[aDecoder decodeObjectForKey:@"latitude"] floatValue];
         self.longtitude = [[aDecoder decodeObjectForKey:@"longtitude"] floatValue];
     }
@@ -28,6 +29,7 @@
 -(void)encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeObject:self.city forKey:@"city"];
     [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.address forKey:@"address"];
     [aCoder encodeObject:@(self.latitude) forKey:@"latitude"];
     [aCoder encodeObject:@(self.longtitude) forKey:@"longtitude"];
     

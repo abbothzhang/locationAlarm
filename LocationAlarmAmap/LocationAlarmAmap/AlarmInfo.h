@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "LocationInfo.h"
 
+#define USER_DEFAULT_ALARM_ARRAY_KEY    @"USER_DEFAULT_ALARM_ARRAY_KEY"
+
 @interface AlarmInfo : NSObject
 
 @property (nonatomic) BOOL                  alarmOpened;

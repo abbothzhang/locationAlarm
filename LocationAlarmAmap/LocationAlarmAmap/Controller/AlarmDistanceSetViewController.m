@@ -89,20 +89,20 @@
     AlarmInfo *alarmInfo = [[AlarmInfo alloc] init];
     alarmInfo.alarmOpened = YES;
     alarmInfo.distance = self.distance;
+    alarmInfo.locationInfo = self.locationInfo;
     
-//    alarmInfo.locationInfo = self.locationInfo;
 //    alarmInfo.name = self.locationInfo.name;
 //    alarmInfo.latitude = self.locationInfo.latitude;
 //    alarmInfo.longtitude = self.locationInfo.longtitude;
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:alarmInfo];
     
-    NSMutableArray *array = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:@"alarmArray"]];
+    NSMutableArray *array = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:USER_DEFAULT_ALARM_ARRAY_KEY]];
     if (!array) {
         array = [[NSMutableArray alloc] initWithObjects:data, nil];
     }else{
         [array addObject:data];
     }
-    [defaults setValue:array forKey:@"alarmArray"];
+    [defaults setValue:array forKey:USER_DEFAULT_ALARM_ARRAY_KEY];
     [ZHHint showToast:@"添加成功!"];
     
     [self dismissViewControllerAnimated:YES completion:^{

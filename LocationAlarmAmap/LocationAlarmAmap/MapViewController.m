@@ -13,6 +13,8 @@
 #import "AlarmDistanceSetViewController.h"
 #import "ZHHUDActivityView.h"
 #import "Utils.h"
+#import "AlarmInfo.h"
+#import <Foundation/Foundation.h>
 
 
 #define ANIM_TIME_TABLEVIEW     0.2
@@ -50,6 +52,7 @@
 //    [self initToolBar];
     [self initSearchBar];
     [self initSearchResultTableView];
+    [self addAlarmPoint];
     self.title = @"位置闹钟";
     self.mapView.showsUserLocation = YES;
     self.mapView.userTrackingMode = MAUserTrackingModeFollow;
@@ -91,7 +94,7 @@
     
 
     
-    self.tableArray = [[NSMutableArray alloc] initWithCapacity:5];
+    self.tableArray = [[NSMutableArray alloc] initWithCapacity:8];
 }
 
 -(void)initSearchBar{
@@ -131,6 +134,17 @@
 {
     /* Add observer for showsUserLocation. */
     [self.mapView addObserver:self forKeyPath:@"showsUserLocation" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+-(void)addAlarmPoint{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *array = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:USER_DEFAULT_ALARM_ARRAY_KEY]];
+    for (NSData *alarmData in array) {
+        AlarmInfo *alarmInfo = [NSKeyedUnarchiver unarchiveObjectWithData:alarmData];
+        LocationInfo *locInfo = alarmInfo.locationInfo;
+        [self addPointToMapWithTitle:locInfo.name subTitle:locInfo.address latitude:locInfo.latitude longtitude:locInfo.longtitude selected:NO];
+    }
+
 }
 
 #pragma mark - UISearchBarDelegate
@@ -178,7 +192,6 @@
     [self.tableArray removeAllObjects];
     for (AMapPOI *p in response.pois) {
         strPoi = [NSString stringWithFormat:@"%@\nPOI: %@", strPoi, p.description];
-//        [self addPointToMapWithTitle:p.name subTitle:p.address latitude:p.location.latitude longtitude:p.location.longitude];
         LocationInfo *locInfo = [[LocationInfo alloc] init];
         locInfo.name = p.name;
         locInfo.address = p.address;
@@ -201,13 +214,16 @@
 }
 
 //根据信息将标注添加到地图上
--(void)addPointToMapWithTitle:(NSString*)title subTitle:(NSString*)subTitle latitude:(CGFloat)latitude longtitude:(CGFloat)longtitude  {
+-(void)addPointToMapWithTitle:(NSString*)title subTitle:(NSString*)subTitle latitude:(CGFloat)latitude longtitude:(CGFloat)longtitude  selected:(BOOL)selected{
     MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
     pointAnnotation.coordinate = CLLocationCoordinate2DMake(latitude, longtitude);
     pointAnnotation.title = title;
     pointAnnotation.subtitle = subTitle;
     [self.mapView addAnnotation:pointAnnotation];
-    [self.mapView selectAnnotation:pointAnnotation animated:YES];
+    if (selected) {
+        [self.mapView selectAnnotation:pointAnnotation animated:YES];
+    }
+
 }
 
 //定位后发起逆地理编码，在这里实现逆地理编码的回调函数
@@ -300,7 +316,7 @@ updatingLocation:(BOOL)updatingLocation
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     LocationInfo *locInfo = [self.tableArray objectAtIndex:indexPath.row];
     _addAlarmLocationInfo = locInfo;
-    [self addPointToMapWithTitle:locInfo.name subTitle:locInfo.address latitude:locInfo.latitude longtitude:locInfo.longtitude];
+    [self addPointToMapWithTitle:locInfo.name subTitle:locInfo.address latitude:locInfo.latitude longtitude:locInfo.longtitude selected:YES];
     
     MapViewController __weak *weakSelf = self;
     [UIView animateWithDuration:ANIM_TIME_TABLEVIEW animations:^{
@@ -339,7 +355,7 @@ updatingLocation:(BOOL)updatingLocation
     if (!disVC) {
         return;
     }
-//    [self.navigationController pushViewController:disVC animated:YES];
+    
     [self presentViewController:disVC animated:YES completion:^{
         
     }];
