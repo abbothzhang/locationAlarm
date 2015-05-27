@@ -6,20 +6,20 @@
 //  Copyright (c) 2013年 songjian. All rights reserved.
 //
 
-#import "MapViewController.h"
-#import "UserLocationInfo.h"
-#import "LocationInfo.h"
+#import "ZHMapViewController.h"
+#import "ZHUserLocationInfo.h"
+#import "ZHLocationInfo.h"
 #import "ZHHint.h"
-#import "AlarmDistanceSetViewController.h"
+#import "ZHAlarmDistanceSetViewController.h"
 #import "ZHHUDActivityView.h"
 #import "Utils.h"
-#import "AlarmInfo.h"
+#import "ZHAlarmInfo.h"
 #import <Foundation/Foundation.h>
 
 
 #define ANIM_TIME_TABLEVIEW     0.2
 
-@interface MapViewController ()<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface ZHMapViewController ()<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) ZHHUDActivityView                  *hudView;
 
@@ -30,11 +30,11 @@
 @property (nonatomic,strong) UIView                             *tableBgView;
 @property (nonatomic,strong) UITapGestureRecognizer             *tableBgTapGes;
 @property (nonatomic,strong) NSMutableArray                     *tableArray;
-@property (nonatomic,strong) LocationInfo                       *addAlarmLocationInfo;
+@property (nonatomic,strong) ZHLocationInfo                       *addAlarmLocationInfo;
 
 @end
 
-@implementation MapViewController
+@implementation ZHMapViewController
 @synthesize showSegment, modeSegment;
 
 #pragma mark - Life Cycle
@@ -140,8 +140,8 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *array = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:USER_DEFAULT_ALARM_ARRAY_KEY]];
     for (NSData *alarmData in array) {
-        AlarmInfo *alarmInfo = [NSKeyedUnarchiver unarchiveObjectWithData:alarmData];
-        LocationInfo *locInfo = alarmInfo.locationInfo;
+        ZHAlarmInfo *alarmInfo = [NSKeyedUnarchiver unarchiveObjectWithData:alarmData];
+        ZHLocationInfo *locInfo = alarmInfo.locationInfo;
         [self addPointToMapWithTitle:locInfo.name subTitle:locInfo.address latitude:locInfo.latitude longtitude:locInfo.longtitude selected:NO];
     }
 
@@ -192,14 +192,14 @@
     [self.tableArray removeAllObjects];
     for (AMapPOI *p in response.pois) {
         strPoi = [NSString stringWithFormat:@"%@\nPOI: %@", strPoi, p.description];
-        LocationInfo *locInfo = [[LocationInfo alloc] init];
+        ZHLocationInfo *locInfo = [[ZHLocationInfo alloc] init];
         locInfo.name = p.name;
         locInfo.address = p.address;
         locInfo.latitude = p.location.latitude;
         locInfo.longtitude = p.location.longitude;
         [self.tableArray addObject:locInfo];
     }
-    MapViewController __weak *weakSelf = self;
+    ZHMapViewController __weak *weakSelf = self;
     [UIView animateWithDuration:ANIM_TIME_TABLEVIEW animations:^{
         [weakSelf.view addSubview:weakSelf.tableBgView];
         weakSelf.searchResultTableView.frame = CGRectMake(0, 99, weakSelf.view.frame.size.width, 300);
@@ -306,7 +306,7 @@ updatingLocation:(BOOL)updatingLocation
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIden];
     }
-    LocationInfo *locInfo = [self.tableArray objectAtIndex:indexPath.row];
+    ZHLocationInfo *locInfo = [self.tableArray objectAtIndex:indexPath.row];
     cell.textLabel.text = locInfo.name;
     cell.detailTextLabel.text = locInfo.address;
     return cell;
@@ -314,11 +314,11 @@ updatingLocation:(BOOL)updatingLocation
 
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    LocationInfo *locInfo = [self.tableArray objectAtIndex:indexPath.row];
+    ZHLocationInfo *locInfo = [self.tableArray objectAtIndex:indexPath.row];
     _addAlarmLocationInfo = locInfo;
     [self addPointToMapWithTitle:locInfo.name subTitle:locInfo.address latitude:locInfo.latitude longtitude:locInfo.longtitude selected:YES];
     
-    MapViewController __weak *weakSelf = self;
+    ZHMapViewController __weak *weakSelf = self;
     [UIView animateWithDuration:ANIM_TIME_TABLEVIEW animations:^{
         [weakSelf hideTableView];
         CLLocationCoordinate2D centerPoint = CLLocationCoordinate2DMake(locInfo.latitude, locInfo.longtitude);
@@ -331,7 +331,7 @@ updatingLocation:(BOOL)updatingLocation
 
 #pragma mark - Action Handle
 -(void)hideTableView{
-    MapViewController __weak *weakSelf = self;
+    ZHMapViewController __weak *weakSelf = self;
     [weakSelf.tableBgView removeFromSuperview];
     weakSelf.searchResultTableView.frame = CGRectMake(0, 99, weakSelf.view.frame.size.width, 0);
     
@@ -351,7 +351,7 @@ updatingLocation:(BOOL)updatingLocation
     if (!_addAlarmLocationInfo) {
         return;
     }
-    AlarmDistanceSetViewController *disVC = [[AlarmDistanceSetViewController alloc] initWithAlarmLocationInfo:_addAlarmLocationInfo];
+    ZHAlarmDistanceSetViewController *disVC = [[ZHAlarmDistanceSetViewController alloc] initWithAlarmLocationInfo:_addAlarmLocationInfo];
     if (!disVC) {
         return;
     }

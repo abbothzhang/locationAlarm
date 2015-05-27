@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 albert. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "ZHMainViewController.h"
 
-@interface MainViewController ()
+@interface ZHMainViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation ZHMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

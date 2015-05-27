@@ -1,13 +1,13 @@
 //
-//  MainViewController.h
+//  SettiongViewController.h
 //  LocationAlarmAmap
 //
-//  Created by albert on 15/5/9.
+//  Created by albert on 15/5/10.
 //  Copyright (c) 2015年 albert. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface ZHSettiongViewController : UIViewController
 
 @end

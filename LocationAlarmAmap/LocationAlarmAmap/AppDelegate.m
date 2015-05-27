@@ -7,10 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
-#import "MapViewController.h"
-#import "SettiongViewController.h"
+#import "ZHMainViewController.h"
+#import "ZHMapViewController.h"
+#import "ZHAlarmListViewController.h"
+#import "ZHSettiongViewController.h"
 #import "ImageUtil.h"
+#import "ZHMyTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,21 +29,29 @@
 
     [MAMapServices sharedServices].apiKey = @"2e661c0d2f8ac10f653a37c6221c1714";
     
-    MapViewController *mapVc = [[MapViewController alloc] init];
-    SettiongViewController *settiongVC = [[SettiongViewController alloc] init];
+    //init VC
+    ZHMapViewController *mapVc = [[ZHMapViewController alloc] init];
+    ZHAlarmListViewController *alarmListVC = [[ZHAlarmListViewController alloc] init];
+    ZHSettiongViewController *settiongVC = [[ZHSettiongViewController alloc] init];
     
+    //set VC
     UIImage *img1Nor = [UIImage imageNamed:@"img1.png"];
     img1Nor = [ImageUtil scaleImg:img1Nor toScale:0.3];
     
-//    tableVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"列表"image:img1Nor selectedImage:img1Nor];
+
     mapVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"地图"image:img1Nor selectedImage:img1Nor];
+    mapVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"地图" image:img1Nor tag:0];
+    alarmListVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"列表"image:img1Nor selectedImage:img1Nor];
     settiongVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"设置"image:img1Nor selectedImage:img1Nor];
+//    mapVc.tabBarItem.title = @"home";
+//    [mapVc.tabBarItem setFinishedSelectedImage:img1Nor withFinishedUnselectedImage:img1Nor];
     
-//    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:tableVC];
-    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:mapVc];
+    //set nav
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:mapVc];
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:alarmListVC];
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:settiongVC];
     
-    NSArray *vcArray = @[nav2,nav3];
+    NSArray *vcArray = @[nav1,nav2,nav3];
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
     tabBarVC.viewControllers = vcArray;
     tabBarVC.selectedIndex = 0;

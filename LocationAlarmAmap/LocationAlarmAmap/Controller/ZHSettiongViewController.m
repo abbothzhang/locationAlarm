@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 albert. All rights reserved.
 //
 
-#import "SettiongViewController.h"
+#import "ZHSettiongViewController.h"
 
-@interface SettiongViewController ()
+@interface ZHSettiongViewController ()
 
 @end
 
-@implementation SettiongViewController
+@implementation ZHSettiongViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

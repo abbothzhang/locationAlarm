@@ -6,14 +6,14 @@
 //  Copyright (c) 2015年 albert. All rights reserved.
 //
 
-#import "AlarmDistanceSetViewController.h"
-#import "LocationInfo.h"
-#import "AlarmInfo.h"
+#import "ZHAlarmDistanceSetViewController.h"
+#import "ZHLocationInfo.h"
+#import "ZHAlarmInfo.h"
 
 
-@interface AlarmDistanceSetViewController ()<UITextFieldDelegate>
+@interface ZHAlarmDistanceSetViewController ()<UITextFieldDelegate>
 
-@property (nonatomic,strong) LocationInfo           *locationInfo;
+@property (nonatomic,strong) ZHLocationInfo           *locationInfo;
 @property (nonatomic) double                        distance;
 
 @property (nonatomic,strong) UITextField *distanceFiled;
@@ -21,10 +21,10 @@
 
 @end
 
-@implementation AlarmDistanceSetViewController
+@implementation ZHAlarmDistanceSetViewController
 
 
--(instancetype)initWithAlarmLocationInfo:(LocationInfo*)locationInfo{
+-(instancetype)initWithAlarmLocationInfo:(ZHLocationInfo*)locationInfo{
     if (!locationInfo) {
         return nil;
     }
@@ -63,10 +63,20 @@
     _addAlarmBtn.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height- 390*HEIGHT_SCALE);
     [_addAlarmBtn setTitle:@"添加闹钟" forState:UIControlStateNormal];
     [_addAlarmBtn addTarget:self action:@selector(addAlarmBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    _addAlarmBtn.alpha = 0.4;
+    _addAlarmBtn.alpha = 0.6;
     [_addAlarmBtn primaryStyle];
     [self.view addSubview:_addAlarmBtn];
     
+}
+
+-(void)testBlock{
+    
+    void(^zhblock)() = ^{
+        
+    };
+    
+    zhblock();
+
 }
 
 #pragma action
@@ -86,7 +96,7 @@
     }
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    AlarmInfo *alarmInfo = [[AlarmInfo alloc] init];
+    ZHAlarmInfo *alarmInfo = [[ZHAlarmInfo alloc] init];
     alarmInfo.alarmOpened = YES;
     alarmInfo.distance = self.distance;
     alarmInfo.locationInfo = self.locationInfo;

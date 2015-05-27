@@ -6,8 +6,8 @@
 //  Copyright (c) 2013年 songjian. All rights reserved.
 //
 
-#import "BaseMapViewController.h"
+#import "ZHBaseMapViewController.h"
 
-@interface MapViewController : BaseMapViewController
+@interface ZHMapViewController : ZHBaseMapViewController
 
 @end

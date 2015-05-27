@@ -6,15 +6,15 @@
 //  Copyright (c) 2013年 songjian. All rights reserved.
 //
 
-#import "BaseMapViewController.h"
+#import "ZHBaseMapViewController.h"
 
-@interface BaseMapViewController()
+@interface ZHBaseMapViewController()
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
-@implementation BaseMapViewController
+@implementation ZHBaseMapViewController
 @synthesize mapView = _mapView;
 @synthesize search  = _search;
 

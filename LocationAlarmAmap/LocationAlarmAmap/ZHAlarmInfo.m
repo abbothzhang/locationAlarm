@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 张辉. All rights reserved.
 //
 
-#import "AlarmInfo.h"
+#import "ZHAlarmInfo.h"
 
-@interface AlarmInfo()<NSCoding>
+@interface ZHAlarmInfo()<NSCoding>
 
 @end
 
-@implementation AlarmInfo
+@implementation ZHAlarmInfo
 
 -(id)initWithCoder:(NSCoder *)aDecoder{
     self = [super init];

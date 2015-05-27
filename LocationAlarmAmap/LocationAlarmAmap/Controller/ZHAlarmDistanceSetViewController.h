@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class LocationInfo;
+@class ZHLocationInfo;
 
-@interface AlarmDistanceSetViewController : UIViewController
+@interface ZHAlarmDistanceSetViewController : UIViewController
 
--(instancetype)initWithAlarmLocationInfo:(LocationInfo*)locationInfo;
+-(instancetype)initWithAlarmLocationInfo:(ZHLocationInfo*)locationInfo;
 
 @end

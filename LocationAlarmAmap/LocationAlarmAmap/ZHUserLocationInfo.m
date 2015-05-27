@@ -6,21 +6,21 @@
 //  Copyright (c) 2015年 张辉. All rights reserved.
 //
 
-#import "UserLocationInfo.h"
+#import "ZHUserLocationInfo.h"
 
 
 
-@interface UserLocationInfo()
+@interface ZHUserLocationInfo()
 
 @end
 
-@implementation UserLocationInfo
+@implementation ZHUserLocationInfo
 
 +(instancetype)sharedInstance{
-    static  UserLocationInfo  *instance;
+    static  ZHUserLocationInfo  *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[UserLocationInfo alloc] init];
+        instance = [[ZHUserLocationInfo alloc] init];
     });
     return instance;
 }

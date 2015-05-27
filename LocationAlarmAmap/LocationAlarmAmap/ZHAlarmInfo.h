@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LocationInfo.h"
+#import "ZHLocationInfo.h"
 
 #define USER_DEFAULT_ALARM_ARRAY_KEY    @"USER_DEFAULT_ALARM_ARRAY_KEY"
 
-@interface AlarmInfo : NSObject
+@interface ZHAlarmInfo : NSObject
 
 @property (nonatomic) BOOL                  alarmOpened;
 @property (nonatomic) double                distance;
-@property (nonatomic,strong) LocationInfo   *locationInfo;
+@property (nonatomic,strong) ZHLocationInfo   *locationInfo;
 
 //@property (nonatomic,strong)NSString        *name;
 //@property (nonatomic) double                latitude;

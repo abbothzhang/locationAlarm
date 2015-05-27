@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 albert. All rights reserved.
 //
 
-#import "LocationInfo.h"
+#import "ZHLocationInfo.h"
 
-@interface LocationInfo()<NSCoding>
+@interface ZHLocationInfo()<NSCoding>
 
 @end
 
-@implementation LocationInfo
+@implementation ZHLocationInfo
 
 -(id)initWithCoder:(NSCoder *)aDecoder{
     self = [super init];

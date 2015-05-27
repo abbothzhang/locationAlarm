@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LocationInfo : NSObject
+@interface ZHLocationInfo : NSObject
 
 @property(nonatomic,strong) NSString            *city;
 @property(nonatomic,strong) NSString            *name;

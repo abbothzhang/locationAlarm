@@ -7,11 +7,11 @@
 //
 
 #import "AlarmTableCell.h"
-#import "AlarmInfo.h"
+#import "ZHAlarmInfo.h"
 
 @interface AlarmTableCell()
 
-@property (nonatomic,strong) AlarmInfo          *alarmInfo;
+@property (nonatomic,strong) ZHAlarmInfo          *alarmInfo;
 
 @end
 
@@ -25,7 +25,7 @@
     return self;
 }
 
--(void)setData:(AlarmInfo*)alarmInfo{
+-(void)setData:(ZHAlarmInfo*)alarmInfo{
     _alarmInfo = alarmInfo;
 }
 

@@ -7,20 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		502839E31B00FF48001B9C2D /* AlarmInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839E01B00FF48001B9C2D /* AlarmInfo.m */; };
-		502839E41B00FF48001B9C2D /* UserLocationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839E21B00FF48001B9C2D /* UserLocationInfo.m */; };
+		50068E361B0B65060019BA56 /* iconfont-list@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50068E341B0B65060019BA56 /* iconfont-list@2x.jpg */; };
+		50068E3B1B0B6AE50019BA56 /* ZHMyTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50068E3A1B0B6AE50019BA56 /* ZHMyTabBarViewController.m */; };
+		50068E3E1B0B72B70019BA56 /* home_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 50068E3C1B0B72B70019BA56 /* home_selected.png */; };
+		50068E3F1B0B72B70019BA56 /* home_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50068E3D1B0B72B70019BA56 /* home_selected@2x.png */; };
+		50068E421B0B73CC0019BA56 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 50068E401B0B73CC0019BA56 /* home.png */; };
+		50068E431B0B73CC0019BA56 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50068E411B0B73CC0019BA56 /* home@2x.png */; };
+		50068E451B0B7ADE0019BA56 /* iconfont-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 50068E441B0B7ADE0019BA56 /* iconfont-list.png */; };
+		502839E31B00FF48001B9C2D /* ZHAlarmInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839E01B00FF48001B9C2D /* ZHAlarmInfo.m */; };
+		502839E41B00FF48001B9C2D /* ZHUserLocationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839E21B00FF48001B9C2D /* ZHUserLocationInfo.m */; };
 		502839E91B00FF55001B9C2D /* ZHHint.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839E61B00FF55001B9C2D /* ZHHint.m */; };
 		502839EA1B00FF55001B9C2D /* AlarmTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839E81B00FF55001B9C2D /* AlarmTableCell.m */; };
 		502839ED1B01013B001B9C2D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 502839EC1B01013B001B9C2D /* MBProgressHUD.m */; };
-		503B0B491B024CC1002C6DDF /* LocationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B0B481B024CC1002C6DDF /* LocationInfo.m */; };
-		503B1FC51AFE567D0094457F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B1FC41AFE567D0094457F /* MainViewController.m */; };
-		503B1FC81AFF78DA0094457F /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B1FC71AFF78DA0094457F /* BaseMapViewController.m */; };
-		503EB2651AFF7AB00067DCE9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503EB2641AFF7AB00067DCE9 /* MapViewController.m */; };
+		503B0B491B024CC1002C6DDF /* ZHLocationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B0B481B024CC1002C6DDF /* ZHLocationInfo.m */; };
+		503B1FC51AFE567D0094457F /* ZHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B1FC41AFE567D0094457F /* ZHMainViewController.m */; };
+		503B1FC81AFF78DA0094457F /* ZHBaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B1FC71AFF78DA0094457F /* ZHBaseMapViewController.m */; };
+		503EB2651AFF7AB00067DCE9 /* ZHMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503EB2641AFF7AB00067DCE9 /* ZHMapViewController.m */; };
 		503EB26D1AFFAA120067DCE9 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 503EB26C1AFFAA120067DCE9 /* AMap.bundle */; };
 		503EB2721AFFAA8D0067DCE9 /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = 503EB26F1AFFAA8D0067DCE9 /* compass.png */; };
 		503EB2731AFFAA8D0067DCE9 /* compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 503EB2701AFFAA8D0067DCE9 /* compass@2x.png */; };
 		503EB2741AFFAA8D0067DCE9 /* compass@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 503EB2711AFFAA8D0067DCE9 /* compass@3x.png */; };
-		503EB2771AFFAFF30067DCE9 /* SettiongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503EB2761AFFAFF30067DCE9 /* SettiongViewController.m */; };
+		503EB2771AFFAFF30067DCE9 /* ZHSettiongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503EB2761AFFAFF30067DCE9 /* ZHSettiongViewController.m */; };
 		503EB2821AFFB0660067DCE9 /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 503EB27F1AFFB0660067DCE9 /* ImageUtil.m */; };
 		503EB2831AFFB0660067DCE9 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 503EB2811AFFB0660067DCE9 /* Utils.m */; };
 		503EB2871AFFB3BF0067DCE9 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 503EB2861AFFB3BF0067DCE9 /* img1.png */; };
@@ -31,7 +38,8 @@
 		5055104E1AF7B37E0033952B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5055104D1AF7B37E0033952B /* Images.xcassets */; };
 		505510511AF7B37E0033952B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5055104F1AF7B37E0033952B /* LaunchScreen.xib */; };
 		5055105D1AF7B37E0033952B /* LocationAlarmAmapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055105C1AF7B37E0033952B /* LocationAlarmAmapTests.m */; };
-		50F19BDE1B042B86006E089D /* AlarmDistanceSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F19BDD1B042B86006E089D /* AlarmDistanceSetViewController.m */; };
+		50F0EB831B0855830044B596 /* ZHAlarmListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F0EB821B0855830044B596 /* ZHAlarmListViewController.m */; };
+		50F19BDE1B042B86006E089D /* ZHAlarmDistanceSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F19BDD1B042B86006E089D /* ZHAlarmDistanceSetViewController.m */; };
 		50F19BE81B04E255006E089D /* ZHHUDActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F19BE71B04E255006E089D /* ZHHUDActivityView.m */; };
 		50F19BEB1B04FA86006E089D /* UIButton+Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F19BEA1B04FA86006E089D /* UIButton+Bootstrap.m */; };
 		50F19BEE1B04FB18006E089D /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F19BED1B04FB18006E089D /* NSString+FontAwesome.m */; };
@@ -51,30 +59,38 @@
 /* Begin PBXFileReference section */
 		0B98F9807026EA2A34E51337 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		257D5ADDC1AE59C5177B866F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		502839DF1B00FF48001B9C2D /* AlarmInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmInfo.h; sourceTree = "<group>"; };
-		502839E01B00FF48001B9C2D /* AlarmInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmInfo.m; sourceTree = "<group>"; };
-		502839E11B00FF48001B9C2D /* UserLocationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationInfo.h; sourceTree = "<group>"; };
-		502839E21B00FF48001B9C2D /* UserLocationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationInfo.m; sourceTree = "<group>"; };
+		50068E341B0B65060019BA56 /* iconfont-list@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iconfont-list@2x.jpg"; sourceTree = "<group>"; };
+		50068E391B0B6AE50019BA56 /* ZHMyTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHMyTabBarViewController.h; path = Controller/ZHMyTabBarViewController.h; sourceTree = "<group>"; };
+		50068E3A1B0B6AE50019BA56 /* ZHMyTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHMyTabBarViewController.m; path = Controller/ZHMyTabBarViewController.m; sourceTree = "<group>"; };
+		50068E3C1B0B72B70019BA56 /* home_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_selected.png; sourceTree = "<group>"; };
+		50068E3D1B0B72B70019BA56 /* home_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_selected@2x.png"; sourceTree = "<group>"; };
+		50068E401B0B73CC0019BA56 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		50068E411B0B73CC0019BA56 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		50068E441B0B7ADE0019BA56 /* iconfont-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-list.png"; sourceTree = "<group>"; };
+		502839DF1B00FF48001B9C2D /* ZHAlarmInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAlarmInfo.h; sourceTree = "<group>"; };
+		502839E01B00FF48001B9C2D /* ZHAlarmInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAlarmInfo.m; sourceTree = "<group>"; };
+		502839E11B00FF48001B9C2D /* ZHUserLocationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHUserLocationInfo.h; sourceTree = "<group>"; };
+		502839E21B00FF48001B9C2D /* ZHUserLocationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHUserLocationInfo.m; sourceTree = "<group>"; };
 		502839E51B00FF55001B9C2D /* ZHHint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHHint.h; sourceTree = "<group>"; };
 		502839E61B00FF55001B9C2D /* ZHHint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHHint.m; sourceTree = "<group>"; };
 		502839E71B00FF55001B9C2D /* AlarmTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmTableCell.h; sourceTree = "<group>"; };
 		502839E81B00FF55001B9C2D /* AlarmTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTableCell.m; sourceTree = "<group>"; };
 		502839EB1B01013B001B9C2D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		502839EC1B01013B001B9C2D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		503B0B471B024CC1002C6DDF /* LocationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationInfo.h; path = Model/LocationInfo.h; sourceTree = "<group>"; };
-		503B0B481B024CC1002C6DDF /* LocationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationInfo.m; path = Model/LocationInfo.m; sourceTree = "<group>"; };
-		503B1FC31AFE567D0094457F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Controller/MainViewController.h; sourceTree = "<group>"; };
-		503B1FC41AFE567D0094457F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Controller/MainViewController.m; sourceTree = "<group>"; };
-		503B1FC61AFF78DA0094457F /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
-		503B1FC71AFF78DA0094457F /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
-		503EB2631AFF7AB00067DCE9 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		503EB2641AFF7AB00067DCE9 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		503B0B471B024CC1002C6DDF /* ZHLocationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHLocationInfo.h; path = Model/ZHLocationInfo.h; sourceTree = "<group>"; };
+		503B0B481B024CC1002C6DDF /* ZHLocationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHLocationInfo.m; path = Model/ZHLocationInfo.m; sourceTree = "<group>"; };
+		503B1FC31AFE567D0094457F /* ZHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHMainViewController.h; path = Controller/ZHMainViewController.h; sourceTree = "<group>"; };
+		503B1FC41AFE567D0094457F /* ZHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHMainViewController.m; path = Controller/ZHMainViewController.m; sourceTree = "<group>"; };
+		503B1FC61AFF78DA0094457F /* ZHBaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBaseMapViewController.h; sourceTree = "<group>"; };
+		503B1FC71AFF78DA0094457F /* ZHBaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBaseMapViewController.m; sourceTree = "<group>"; };
+		503EB2631AFF7AB00067DCE9 /* ZHMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHMapViewController.h; sourceTree = "<group>"; };
+		503EB2641AFF7AB00067DCE9 /* ZHMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHMapViewController.m; sourceTree = "<group>"; };
 		503EB26C1AFFAA120067DCE9 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
 		503EB26F1AFFAA8D0067DCE9 /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass.png; sourceTree = "<group>"; };
 		503EB2701AFFAA8D0067DCE9 /* compass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass@2x.png"; sourceTree = "<group>"; };
 		503EB2711AFFAA8D0067DCE9 /* compass@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass@3x.png"; sourceTree = "<group>"; };
-		503EB2751AFFAFF30067DCE9 /* SettiongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettiongViewController.h; path = Controller/SettiongViewController.h; sourceTree = "<group>"; };
-		503EB2761AFFAFF30067DCE9 /* SettiongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettiongViewController.m; path = Controller/SettiongViewController.m; sourceTree = "<group>"; };
+		503EB2751AFFAFF30067DCE9 /* ZHSettiongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHSettiongViewController.h; path = Controller/ZHSettiongViewController.h; sourceTree = "<group>"; };
+		503EB2761AFFAFF30067DCE9 /* ZHSettiongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHSettiongViewController.m; path = Controller/ZHSettiongViewController.m; sourceTree = "<group>"; };
 		503EB27E1AFFB0660067DCE9 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageUtil.h; path = Utils/ImageUtil.h; sourceTree = "<group>"; };
 		503EB27F1AFFB0660067DCE9 /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageUtil.m; path = Utils/ImageUtil.m; sourceTree = "<group>"; };
 		503EB2801AFFB0660067DCE9 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Utils/Utils.h; sourceTree = "<group>"; };
@@ -94,8 +110,10 @@
 		505510561AF7B37E0033952B /* LocationAlarmAmapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationAlarmAmapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5055105B1AF7B37E0033952B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5055105C1AF7B37E0033952B /* LocationAlarmAmapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationAlarmAmapTests.m; sourceTree = "<group>"; };
-		50F19BDC1B042B86006E089D /* AlarmDistanceSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlarmDistanceSetViewController.h; path = Controller/AlarmDistanceSetViewController.h; sourceTree = "<group>"; };
-		50F19BDD1B042B86006E089D /* AlarmDistanceSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlarmDistanceSetViewController.m; path = Controller/AlarmDistanceSetViewController.m; sourceTree = "<group>"; };
+		50F0EB811B0855830044B596 /* ZHAlarmListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHAlarmListViewController.h; path = Controller/ZHAlarmListViewController.h; sourceTree = "<group>"; };
+		50F0EB821B0855830044B596 /* ZHAlarmListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHAlarmListViewController.m; path = Controller/ZHAlarmListViewController.m; sourceTree = "<group>"; };
+		50F19BDC1B042B86006E089D /* ZHAlarmDistanceSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHAlarmDistanceSetViewController.h; path = Controller/ZHAlarmDistanceSetViewController.h; sourceTree = "<group>"; };
+		50F19BDD1B042B86006E089D /* ZHAlarmDistanceSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHAlarmDistanceSetViewController.m; path = Controller/ZHAlarmDistanceSetViewController.m; sourceTree = "<group>"; };
 		50F19BE61B04E255006E089D /* ZHHUDActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHHUDActivityView.h; sourceTree = "<group>"; };
 		50F19BE71B04E255006E089D /* ZHHUDActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHHUDActivityView.m; sourceTree = "<group>"; };
 		50F19BE91B04FA86006E089D /* UIButton+Bootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Bootstrap.h"; sourceTree = "<group>"; };
@@ -132,19 +150,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		500CAC5F1B134ABD00A451A8 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NetWork;
+			sourceTree = "<group>";
+		};
 		503B1FBF1AFE55630094457F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				503B1FC61AFF78DA0094457F /* BaseMapViewController.h */,
-				503B1FC71AFF78DA0094457F /* BaseMapViewController.m */,
-				503EB2631AFF7AB00067DCE9 /* MapViewController.h */,
-				503EB2641AFF7AB00067DCE9 /* MapViewController.m */,
-				503B1FC31AFE567D0094457F /* MainViewController.h */,
-				503B1FC41AFE567D0094457F /* MainViewController.m */,
-				503EB2751AFFAFF30067DCE9 /* SettiongViewController.h */,
-				503EB2761AFFAFF30067DCE9 /* SettiongViewController.m */,
-				50F19BDC1B042B86006E089D /* AlarmDistanceSetViewController.h */,
-				50F19BDD1B042B86006E089D /* AlarmDistanceSetViewController.m */,
+				503B1FC61AFF78DA0094457F /* ZHBaseMapViewController.h */,
+				503B1FC71AFF78DA0094457F /* ZHBaseMapViewController.m */,
+				503EB2631AFF7AB00067DCE9 /* ZHMapViewController.h */,
+				503EB2641AFF7AB00067DCE9 /* ZHMapViewController.m */,
+				503B1FC31AFE567D0094457F /* ZHMainViewController.h */,
+				503B1FC41AFE567D0094457F /* ZHMainViewController.m */,
+				503EB2751AFFAFF30067DCE9 /* ZHSettiongViewController.h */,
+				503EB2761AFFAFF30067DCE9 /* ZHSettiongViewController.m */,
+				50F19BDC1B042B86006E089D /* ZHAlarmDistanceSetViewController.h */,
+				50F19BDD1B042B86006E089D /* ZHAlarmDistanceSetViewController.m */,
+				50F0EB811B0855830044B596 /* ZHAlarmListViewController.h */,
+				50F0EB821B0855830044B596 /* ZHAlarmListViewController.m */,
+				50068E391B0B6AE50019BA56 /* ZHMyTabBarViewController.h */,
+				50068E3A1B0B6AE50019BA56 /* ZHMyTabBarViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -169,12 +198,12 @@
 		503B1FC11AFE55760094457F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				502839DF1B00FF48001B9C2D /* AlarmInfo.h */,
-				502839E01B00FF48001B9C2D /* AlarmInfo.m */,
-				502839E11B00FF48001B9C2D /* UserLocationInfo.h */,
-				502839E21B00FF48001B9C2D /* UserLocationInfo.m */,
-				503B0B471B024CC1002C6DDF /* LocationInfo.h */,
-				503B0B481B024CC1002C6DDF /* LocationInfo.m */,
+				502839DF1B00FF48001B9C2D /* ZHAlarmInfo.h */,
+				502839E01B00FF48001B9C2D /* ZHAlarmInfo.m */,
+				502839E11B00FF48001B9C2D /* ZHUserLocationInfo.h */,
+				502839E21B00FF48001B9C2D /* ZHUserLocationInfo.m */,
+				503B0B471B024CC1002C6DDF /* ZHLocationInfo.h */,
+				503B0B481B024CC1002C6DDF /* ZHLocationInfo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -195,6 +224,12 @@
 		503EB26E1AFFAA750067DCE9 /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				50068E441B0B7ADE0019BA56 /* iconfont-list.png */,
+				50068E401B0B73CC0019BA56 /* home.png */,
+				50068E411B0B73CC0019BA56 /* home@2x.png */,
+				50068E3C1B0B72B70019BA56 /* home_selected.png */,
+				50068E3D1B0B72B70019BA56 /* home_selected@2x.png */,
+				50068E341B0B65060019BA56 /* iconfont-list@2x.jpg */,
 				503EB2861AFFB3BF0067DCE9 /* img1.png */,
 				503EB26F1AFFAA8D0067DCE9 /* compass.png */,
 				503EB2701AFFAA8D0067DCE9 /* compass@2x.png */,
@@ -229,6 +264,7 @@
 				503B1FC11AFE55760094457F /* Model */,
 				503B1FC01AFE55700094457F /* View */,
 				503B1FBF1AFE55630094457F /* Controller */,
+				500CAC5F1B134ABD00A451A8 /* NetWork */,
 				503B1FC21AFE55840094457F /* Util */,
 				505510401AF7B37E0033952B /* Supporting Files */,
 			);
@@ -364,13 +400,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5055104C1AF7B37E0033952B /* Main.storyboard in Resources */,
+				50068E451B0B7ADE0019BA56 /* iconfont-list.png in Resources */,
 				503EB2871AFFB3BF0067DCE9 /* img1.png in Resources */,
 				505510511AF7B37E0033952B /* LaunchScreen.xib in Resources */,
 				503EB26D1AFFAA120067DCE9 /* AMap.bundle in Resources */,
 				5055104E1AF7B37E0033952B /* Images.xcassets in Resources */,
+				50068E431B0B73CC0019BA56 /* home@2x.png in Resources */,
 				503EB2741AFFAA8D0067DCE9 /* compass@3x.png in Resources */,
 				503EB2721AFFAA8D0067DCE9 /* compass.png in Resources */,
 				503EB2731AFFAA8D0067DCE9 /* compass@2x.png in Resources */,
+				50068E361B0B65060019BA56 /* iconfont-list@2x.jpg in Resources */,
+				50068E421B0B73CC0019BA56 /* home.png in Resources */,
+				50068E3F1B0B72B70019BA56 /* home_selected@2x.png in Resources */,
+				50068E3E1B0B72B70019BA56 /* home_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,23 +464,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				503EB2831AFFB0660067DCE9 /* Utils.m in Sources */,
-				503EB2651AFF7AB00067DCE9 /* MapViewController.m in Sources */,
+				503EB2651AFF7AB00067DCE9 /* ZHMapViewController.m in Sources */,
 				50F19BE81B04E255006E089D /* ZHHUDActivityView.m in Sources */,
 				505510491AF7B37E0033952B /* ViewController.m in Sources */,
-				503B1FC81AFF78DA0094457F /* BaseMapViewController.m in Sources */,
+				503B1FC81AFF78DA0094457F /* ZHBaseMapViewController.m in Sources */,
 				505510461AF7B37E0033952B /* AppDelegate.m in Sources */,
 				505510431AF7B37E0033952B /* main.m in Sources */,
-				503EB2771AFFAFF30067DCE9 /* SettiongViewController.m in Sources */,
-				503B1FC51AFE567D0094457F /* MainViewController.m in Sources */,
+				50068E3B1B0B6AE50019BA56 /* ZHMyTabBarViewController.m in Sources */,
+				503EB2771AFFAFF30067DCE9 /* ZHSettiongViewController.m in Sources */,
+				503B1FC51AFE567D0094457F /* ZHMainViewController.m in Sources */,
 				502839E91B00FF55001B9C2D /* ZHHint.m in Sources */,
 				50F19BEE1B04FB18006E089D /* NSString+FontAwesome.m in Sources */,
 				502839EA1B00FF55001B9C2D /* AlarmTableCell.m in Sources */,
-				502839E41B00FF48001B9C2D /* UserLocationInfo.m in Sources */,
+				50F0EB831B0855830044B596 /* ZHAlarmListViewController.m in Sources */,
+				502839E41B00FF48001B9C2D /* ZHUserLocationInfo.m in Sources */,
 				50F19BEB1B04FA86006E089D /* UIButton+Bootstrap.m in Sources */,
 				503EB2821AFFB0660067DCE9 /* ImageUtil.m in Sources */,
-				50F19BDE1B042B86006E089D /* AlarmDistanceSetViewController.m in Sources */,
-				503B0B491B024CC1002C6DDF /* LocationInfo.m in Sources */,
-				502839E31B00FF48001B9C2D /* AlarmInfo.m in Sources */,
+				50F19BDE1B042B86006E089D /* ZHAlarmDistanceSetViewController.m in Sources */,
+				503B0B491B024CC1002C6DDF /* ZHLocationInfo.m in Sources */,
+				502839E31B00FF48001B9C2D /* ZHAlarmInfo.m in Sources */,
 				502839ED1B01013B001B9C2D /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

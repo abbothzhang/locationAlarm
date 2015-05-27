@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class AlarmInfo;
+@class ZHAlarmInfo;
 @interface AlarmTableCell : UITableViewCell
 
--(void)setData:(AlarmInfo*)alarmInfo;
+-(void)setData:(ZHAlarmInfo*)alarmInfo;
 
 @end
