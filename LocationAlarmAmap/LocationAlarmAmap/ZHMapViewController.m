@@ -163,7 +163,7 @@
     AMapPlaceSearchRequest *poiRequest = [[AMapPlaceSearchRequest alloc] init];
     poiRequest.searchType = AMapSearchType_PlaceKeyword;
     poiRequest.keywords = searchBar.text;
-    NSString *city = [UserLocationInfo sharedInstance].city;
+    NSString *city = [ZHUserLocationInfo sharedInstance].city;
     if (city) {poiRequest.city = @[city];}
     
     poiRequest.requireExtension = YES;
@@ -233,7 +233,7 @@
         //处理搜索结果
         NSString *result = [NSString stringWithFormat:@"ReGeocode:%@",response.regeocode];
         NSLog(@"ReGeo: %@", result);
-        [UserLocationInfo sharedInstance].city = response.regeocode.addressComponent.city;
+        [ZHUserLocationInfo sharedInstance].city = response.regeocode.addressComponent.city;
         
     }
 }
@@ -253,8 +253,8 @@ updatingLocation:(BOOL)updatingLocation
     {
         //取出当前位置的坐标
         NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
-        [UserLocationInfo sharedInstance].latitude = userLocation.location.coordinate.latitude;
-        [UserLocationInfo sharedInstance].longtitude = userLocation.location.coordinate.longitude;
+        [ZHUserLocationInfo sharedInstance].latitude = userLocation.location.coordinate.latitude;
+        [ZHUserLocationInfo sharedInstance].longtitude = userLocation.location.coordinate.longitude;
         
         //构造 AMapReGeocodeSearchRequest 对象,location 为必选项,radius 为可选项
         AMapReGeocodeSearchRequest *regeoRequest = [[AMapReGeocodeSearchRequest alloc] init];
